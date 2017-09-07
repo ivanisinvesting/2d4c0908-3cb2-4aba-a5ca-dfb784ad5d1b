@@ -1,0 +1,217 @@
+<html>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawCharts);
+function drawCharts() {
+MA();
+STD200();
+STD150();
+STD100();
+}
+function MA () {
+var data = new google.visualization.DataTable();
+data.addColumn('date', 'Date');
+data.addColumn('number', 'Actual');
+data.addColumn('number', 'MA200');
+data.addColumn('number', 'MA150');
+data.addColumn('number', 'MA100');
+data.addRows([
+[new Date(2017, 8, 6),10.96,11.088,11.088,11.088],
+[new Date(2017, 8, 5),11.08,11.096,11.096,11.096],
+[new Date(2017, 8, 4),11.17,11.097,11.097,11.097],
+[new Date(2017, 7, 31),11.17,11.092,11.092,11.092],
+[new Date(2017, 7, 30),11.07,11.086,11.086,11.086],
+[new Date(2017, 7, 29),10.99,11.088,11.088,11.088],
+[new Date(2017, 7, 28),11.05,11.096,11.096,11.096],
+[new Date(2017, 7, 25),10.98,11.101,11.101,11.101],
+[new Date(2017, 7, 24),11.03,11.114,11.114,11.114],
+[new Date(2017, 7, 23),10.99,11.125,11.125,11.125],
+[new Date(2017, 7, 22),11.07,11.144,11.144,11.144],
+[new Date(2017, 7, 21),11.02,11.157,11.157,11.157],
+[new Date(2017, 7, 18),11.00,11.184,11.184,11.184],
+[new Date(2017, 7, 17),11.14,11.230,11.230,11.230],
+[new Date(2017, 7, 16),11.19,11.260,11.260,11.260],
+[new Date(2017, 7, 15),11.21,11.295,11.295,11.295],
+[new Date(2017, 7, 14),11.38,11.380,11.380,11.380],
+]);
+
+        var options = {
+            title: 'Moving Average - OCBC Bank[O39.SI]',
+            width: 900,
+            height: 500,
+            legend: { position: 'bottom' },
+            chartArea:{left:'10%',top:'10%',width:'85%',height:'75%'},
+            hAxis: {
+                format: 'MMM-d',
+                gridlines: {count: 10}
+            },
+            vAxis: { gridlines: {count: 10} },
+            backgroundColor: {
+                strokeWidth:3,
+                stroke: '#666'
+            }
+        };
+var chart = new google.visualization.LineChart(document.getElementById('MA'));
+chart.draw(data, options);
+}
+function STD200 () {
+var data = new google.visualization.DataTable();
+data.addColumn('date', 'Date');
+data.addColumn('number', 'Actual');
+data.addColumn('number', 'MA200-2STD');
+data.addColumn('number', 'MA200-1STD');
+data.addColumn('number', 'MA200');
+data.addColumn('number', 'MA200+1STD');
+data.addColumn('number', 'MA200+2STD');
+data.addRows([
+[new Date(2017, 8, 6),10.96,10.8757723928171,10.9820038434674,11.0882352941176,11.1944667447679,11.3006981954182],
+[new Date(2017, 8, 5),11.08,10.8875,10.9919,11.0963,11.2007,11.3051],
+[new Date(2017, 8, 4),11.17,10.8819,10.9896,11.0973,11.205,11.3127],
+[new Date(2017, 7, 31),11.17,10.8727,10.9824,11.0921,11.2018,11.3115],
+[new Date(2017, 7, 30),11.07,10.863,10.9746,11.0862,11.1978,11.3094],
+[new Date(2017, 7, 29),10.99,10.8553,10.9714,11.0875,11.2036,11.3197],
+[new Date(2017, 7, 28),11.05,10.8618,10.9791,11.0964,11.2137,11.331],
+[new Date(2017, 7, 25),10.98,10.857,10.979,11.101,11.223,11.345],
+[new Date(2017, 7, 24),11.03,10.8716,10.993,11.1144,11.2358,11.3572],
+[new Date(2017, 7, 23),10.99,10.8754,11.0002,11.125,11.2498,11.3746],
+[new Date(2017, 7, 22),11.07,10.9007,11.0225,11.1443,11.2661,11.3879],
+[new Date(2017, 7, 21),11.02,10.9019,11.0293,11.1567,11.2841,11.4115],
+[new Date(2017, 7, 18),11.00,10.9392,11.0616,11.184,11.3064,11.4288],
+[new Date(2017, 7, 17),11.14,11.0494,11.1397,11.23,11.3203,11.4106],
+[new Date(2017, 7, 16),11.19,11.0896,11.1748,11.26,11.3452,11.4304],
+[new Date(2017, 7, 15),11.21,11.125,11.21,11.295,11.38,11.465],
+[new Date(2017, 7, 14),11.38,11.38,11.38,11.38,11.38,11.38],
+]);
+
+        var options = {
+            title: 'Bollinger Band 200 - OCBC Bank[O39.SI]',
+            width: 900,
+            height: 500,
+            legend: { position: 'bottom' },
+            chartArea:{left:'10%',top:'10%',width:'85%',height:'75%'},
+            hAxis: {
+                format: 'MMM-d',
+                gridlines: {count: 10}
+            },
+            vAxis: { gridlines: {count: 10} },
+            backgroundColor: {
+                strokeWidth:3,
+                stroke: '#666'
+            }
+        };
+var chart = new google.visualization.LineChart(document.getElementById('STD200'));
+chart.draw(data, options);
+}
+function STD150 () {
+var data = new google.visualization.DataTable();
+data.addColumn('date', 'Date');
+data.addColumn('number', 'Actual');
+data.addColumn('number', 'MA150-2STD');
+data.addColumn('number', 'MA150-1STD');
+data.addColumn('number', 'MA150');
+data.addColumn('number', 'MA150+1STD');
+data.addColumn('number', 'MA150+2STD');
+data.addRows([
+[new Date(2017, 8, 6),10.96,10.8757723928171,10.9820038434674,11.0882352941176,11.1944667447679,11.3006981954182],
+[new Date(2017, 8, 5),11.08,10.8875,10.9919,11.0963,11.2007,11.3051],
+[new Date(2017, 8, 4),11.17,10.8819,10.9896,11.0973,11.205,11.3127],
+[new Date(2017, 7, 31),11.17,10.8727,10.9824,11.0921,11.2018,11.3115],
+[new Date(2017, 7, 30),11.07,10.863,10.9746,11.0862,11.1978,11.3094],
+[new Date(2017, 7, 29),10.99,10.8553,10.9714,11.0875,11.2036,11.3197],
+[new Date(2017, 7, 28),11.05,10.8618,10.9791,11.0964,11.2137,11.331],
+[new Date(2017, 7, 25),10.98,10.857,10.979,11.101,11.223,11.345],
+[new Date(2017, 7, 24),11.03,10.8716,10.993,11.1144,11.2358,11.3572],
+[new Date(2017, 7, 23),10.99,10.8754,11.0002,11.125,11.2498,11.3746],
+[new Date(2017, 7, 22),11.07,10.9007,11.0225,11.1443,11.2661,11.3879],
+[new Date(2017, 7, 21),11.02,10.9019,11.0293,11.1567,11.2841,11.4115],
+[new Date(2017, 7, 18),11.00,10.9392,11.0616,11.184,11.3064,11.4288],
+[new Date(2017, 7, 17),11.14,11.0494,11.1397,11.23,11.3203,11.4106],
+[new Date(2017, 7, 16),11.19,11.0896,11.1748,11.26,11.3452,11.4304],
+[new Date(2017, 7, 15),11.21,11.125,11.21,11.295,11.38,11.465],
+[new Date(2017, 7, 14),11.38,11.38,11.38,11.38,11.38,11.38],
+]);
+
+        var options = {
+            title: 'Bollinger Band 150 - OCBC Bank[O39.SI]',
+            width: 900,
+            height: 500,
+            legend: { position: 'bottom' },
+            chartArea:{left:'10%',top:'10%',width:'85%',height:'75%'},
+            hAxis: {
+                format: 'MMM-d',
+                gridlines: {count: 10}
+            },
+            vAxis: { gridlines: {count: 10} },
+            backgroundColor: {
+                strokeWidth:3,
+                stroke: '#666'
+            }
+        };
+var chart = new google.visualization.LineChart(document.getElementById('STD150'));
+chart.draw(data, options);
+}
+function STD100 () {
+var data = new google.visualization.DataTable();
+data.addColumn('date', 'Date');
+data.addColumn('number', 'Actual');
+data.addColumn('number', 'MA100-2STD');
+data.addColumn('number', 'MA100-1STD');
+data.addColumn('number', 'MA100');
+data.addColumn('number', 'MA100+1STD');
+data.addColumn('number', 'MA100+2STD');
+data.addRows([
+[new Date(2017, 8, 6),10.96,10.8757723928171,10.9820038434674,11.0882352941176,11.1944667447679,11.3006981954182],
+[new Date(2017, 8, 5),11.08,10.8875,10.9919,11.0963,11.2007,11.3051],
+[new Date(2017, 8, 4),11.17,10.8819,10.9896,11.0973,11.205,11.3127],
+[new Date(2017, 7, 31),11.17,10.8727,10.9824,11.0921,11.2018,11.3115],
+[new Date(2017, 7, 30),11.07,10.863,10.9746,11.0862,11.1978,11.3094],
+[new Date(2017, 7, 29),10.99,10.8553,10.9714,11.0875,11.2036,11.3197],
+[new Date(2017, 7, 28),11.05,10.8618,10.9791,11.0964,11.2137,11.331],
+[new Date(2017, 7, 25),10.98,10.857,10.979,11.101,11.223,11.345],
+[new Date(2017, 7, 24),11.03,10.8716,10.993,11.1144,11.2358,11.3572],
+[new Date(2017, 7, 23),10.99,10.8754,11.0002,11.125,11.2498,11.3746],
+[new Date(2017, 7, 22),11.07,10.9007,11.0225,11.1443,11.2661,11.3879],
+[new Date(2017, 7, 21),11.02,10.9019,11.0293,11.1567,11.2841,11.4115],
+[new Date(2017, 7, 18),11.00,10.9392,11.0616,11.184,11.3064,11.4288],
+[new Date(2017, 7, 17),11.14,11.0494,11.1397,11.23,11.3203,11.4106],
+[new Date(2017, 7, 16),11.19,11.0896,11.1748,11.26,11.3452,11.4304],
+[new Date(2017, 7, 15),11.21,11.125,11.21,11.295,11.38,11.465],
+[new Date(2017, 7, 14),11.38,11.38,11.38,11.38,11.38,11.38],
+]);
+
+        var options = {
+            title: 'Bollinger Band 100 - OCBC Bank[O39.SI]',
+            width: 900,
+            height: 500,
+            legend: { position: 'bottom' },
+            chartArea:{left:'10%',top:'10%',width:'85%',height:'75%'},
+            hAxis: {
+                format: 'MMM-d',
+                gridlines: {count: 10}
+            },
+            vAxis: { gridlines: {count: 10} },
+            backgroundColor: {
+                strokeWidth:3,
+                stroke: '#666'
+            }
+        };
+var chart = new google.visualization.LineChart(document.getElementById('STD100'));
+chart.draw(data, options);
+}
+</script>
+<b>Chart of OCBC Bank[O39.SI]</b><br/>
+<a href="#MA">MA</a>
+<a href="#STD200">STD200</a>
+<a href="#STD150">STD150</a>
+<a href="#STD100">STD100</a>
+<br/>
+<a name="MA"></a><br/>
+<div id="MA"></div><br/>
+<a name="STD200"></a><br/>
+<div id="STD200"></div><br/>
+<a name="STD150"></a><br/>
+<div id="STD150"></div><br/>
+<a name="STD100"></a><br/>
+<div id="STD100"></div><br/>
+</html>

@@ -1,0 +1,217 @@
+<html>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawCharts);
+function drawCharts() {
+MA();
+STD200();
+STD150();
+STD100();
+}
+function MA () {
+var data = new google.visualization.DataTable();
+data.addColumn('date', 'Date');
+data.addColumn('number', 'Actual');
+data.addColumn('number', 'MA200');
+data.addColumn('number', 'MA150');
+data.addColumn('number', 'MA100');
+data.addRows([
+[new Date(2017, 8, 6),2.12,2.115,2.115,2.115],
+[new Date(2017, 8, 5),2.12,2.115,2.115,2.115],
+[new Date(2017, 8, 4),2.11,2.115,2.115,2.115],
+[new Date(2017, 7, 31),2.11,2.115,2.115,2.115],
+[new Date(2017, 7, 30),2.10,2.115,2.115,2.115],
+[new Date(2017, 7, 29),2.11,2.117,2.117,2.117],
+[new Date(2017, 7, 28),2.12,2.117,2.117,2.117],
+[new Date(2017, 7, 25),2.10,2.117,2.117,2.117],
+[new Date(2017, 7, 24),2.09,2.119,2.119,2.119],
+[new Date(2017, 7, 23),2.11,2.123,2.123,2.123],
+[new Date(2017, 7, 22),2.11,2.124,2.124,2.124],
+[new Date(2017, 7, 21),2.11,2.127,2.127,2.127],
+[new Date(2017, 7, 18),2.12,2.130,2.130,2.130],
+[new Date(2017, 7, 17),2.15,2.133,2.133,2.133],
+[new Date(2017, 7, 16),2.13,2.127,2.127,2.127],
+[new Date(2017, 7, 15),2.13,2.125,2.125,2.125],
+[new Date(2017, 7, 14),2.12,2.120,2.120,2.120],
+]);
+
+        var options = {
+            title: 'Moving Average - Frasers Cpt Tr[J69U.SI]',
+            width: 900,
+            height: 500,
+            legend: { position: 'bottom' },
+            chartArea:{left:'10%',top:'10%',width:'85%',height:'75%'},
+            hAxis: {
+                format: 'MMM-d',
+                gridlines: {count: 10}
+            },
+            vAxis: { gridlines: {count: 10} },
+            backgroundColor: {
+                strokeWidth:3,
+                stroke: '#666'
+            }
+        };
+var chart = new google.visualization.LineChart(document.getElementById('MA'));
+chart.draw(data, options);
+}
+function STD200 () {
+var data = new google.visualization.DataTable();
+data.addColumn('date', 'Date');
+data.addColumn('number', 'Actual');
+data.addColumn('number', 'MA200-2STD');
+data.addColumn('number', 'MA200-1STD');
+data.addColumn('number', 'MA200');
+data.addColumn('number', 'MA200+1STD');
+data.addColumn('number', 'MA200+2STD');
+data.addRows([
+[new Date(2017, 8, 6),2.12,2.08862168459116,2.10195790111911,2.11529411764706,2.128630334175,2.14196655070295],
+[new Date(2017, 8, 5),2.12,2.0876,2.1013,2.115,2.1287,2.1424],
+[new Date(2017, 8, 4),2.11,2.0865,2.1006,2.1147,2.1288,2.1429],
+[new Date(2017, 7, 31),2.11,2.086,2.1005,2.115,2.1295,2.144],
+[new Date(2017, 7, 30),2.10,2.0854,2.1004,2.1154,2.1304,2.1454],
+[new Date(2017, 7, 29),2.11,2.0869,2.1018,2.1167,2.1316,2.1465],
+[new Date(2017, 7, 28),2.12,2.0865,2.1019,2.1173,2.1327,2.1481],
+[new Date(2017, 7, 25),2.10,2.0846,2.1008,2.117,2.1332,2.1494],
+[new Date(2017, 7, 24),2.09,2.0871,2.103,2.1189,2.1348,2.1507],
+[new Date(2017, 7, 23),2.11,2.0965,2.1095,2.1225,2.1355,2.1485],
+[new Date(2017, 7, 22),2.11,2.0985,2.1114,2.1243,2.1372,2.1501],
+[new Date(2017, 7, 21),2.11,2.1017,2.1142,2.1267,2.1392,2.1517],
+[new Date(2017, 7, 18),2.12,2.108,2.119,2.13,2.141,2.152],
+[new Date(2017, 7, 17),2.15,2.1107,2.1216,2.1325,2.1434,2.1543],
+[new Date(2017, 7, 16),2.13,2.1173,2.122,2.1267,2.1314,2.1361],
+[new Date(2017, 7, 15),2.13,2.115,2.12,2.125,2.13,2.135],
+[new Date(2017, 7, 14),2.12,2.12,2.12,2.12,2.12,2.12],
+]);
+
+        var options = {
+            title: 'Bollinger Band 200 - Frasers Cpt Tr[J69U.SI]',
+            width: 900,
+            height: 500,
+            legend: { position: 'bottom' },
+            chartArea:{left:'10%',top:'10%',width:'85%',height:'75%'},
+            hAxis: {
+                format: 'MMM-d',
+                gridlines: {count: 10}
+            },
+            vAxis: { gridlines: {count: 10} },
+            backgroundColor: {
+                strokeWidth:3,
+                stroke: '#666'
+            }
+        };
+var chart = new google.visualization.LineChart(document.getElementById('STD200'));
+chart.draw(data, options);
+}
+function STD150 () {
+var data = new google.visualization.DataTable();
+data.addColumn('date', 'Date');
+data.addColumn('number', 'Actual');
+data.addColumn('number', 'MA150-2STD');
+data.addColumn('number', 'MA150-1STD');
+data.addColumn('number', 'MA150');
+data.addColumn('number', 'MA150+1STD');
+data.addColumn('number', 'MA150+2STD');
+data.addRows([
+[new Date(2017, 8, 6),2.12,2.08862168459116,2.10195790111911,2.11529411764706,2.128630334175,2.14196655070295],
+[new Date(2017, 8, 5),2.12,2.0876,2.1013,2.115,2.1287,2.1424],
+[new Date(2017, 8, 4),2.11,2.0865,2.1006,2.1147,2.1288,2.1429],
+[new Date(2017, 7, 31),2.11,2.086,2.1005,2.115,2.1295,2.144],
+[new Date(2017, 7, 30),2.10,2.0854,2.1004,2.1154,2.1304,2.1454],
+[new Date(2017, 7, 29),2.11,2.0869,2.1018,2.1167,2.1316,2.1465],
+[new Date(2017, 7, 28),2.12,2.0865,2.1019,2.1173,2.1327,2.1481],
+[new Date(2017, 7, 25),2.10,2.0846,2.1008,2.117,2.1332,2.1494],
+[new Date(2017, 7, 24),2.09,2.0871,2.103,2.1189,2.1348,2.1507],
+[new Date(2017, 7, 23),2.11,2.0965,2.1095,2.1225,2.1355,2.1485],
+[new Date(2017, 7, 22),2.11,2.0985,2.1114,2.1243,2.1372,2.1501],
+[new Date(2017, 7, 21),2.11,2.1017,2.1142,2.1267,2.1392,2.1517],
+[new Date(2017, 7, 18),2.12,2.108,2.119,2.13,2.141,2.152],
+[new Date(2017, 7, 17),2.15,2.1107,2.1216,2.1325,2.1434,2.1543],
+[new Date(2017, 7, 16),2.13,2.1173,2.122,2.1267,2.1314,2.1361],
+[new Date(2017, 7, 15),2.13,2.115,2.12,2.125,2.13,2.135],
+[new Date(2017, 7, 14),2.12,2.12,2.12,2.12,2.12,2.12],
+]);
+
+        var options = {
+            title: 'Bollinger Band 150 - Frasers Cpt Tr[J69U.SI]',
+            width: 900,
+            height: 500,
+            legend: { position: 'bottom' },
+            chartArea:{left:'10%',top:'10%',width:'85%',height:'75%'},
+            hAxis: {
+                format: 'MMM-d',
+                gridlines: {count: 10}
+            },
+            vAxis: { gridlines: {count: 10} },
+            backgroundColor: {
+                strokeWidth:3,
+                stroke: '#666'
+            }
+        };
+var chart = new google.visualization.LineChart(document.getElementById('STD150'));
+chart.draw(data, options);
+}
+function STD100 () {
+var data = new google.visualization.DataTable();
+data.addColumn('date', 'Date');
+data.addColumn('number', 'Actual');
+data.addColumn('number', 'MA100-2STD');
+data.addColumn('number', 'MA100-1STD');
+data.addColumn('number', 'MA100');
+data.addColumn('number', 'MA100+1STD');
+data.addColumn('number', 'MA100+2STD');
+data.addRows([
+[new Date(2017, 8, 6),2.12,2.08862168459116,2.10195790111911,2.11529411764706,2.128630334175,2.14196655070295],
+[new Date(2017, 8, 5),2.12,2.0876,2.1013,2.115,2.1287,2.1424],
+[new Date(2017, 8, 4),2.11,2.0865,2.1006,2.1147,2.1288,2.1429],
+[new Date(2017, 7, 31),2.11,2.086,2.1005,2.115,2.1295,2.144],
+[new Date(2017, 7, 30),2.10,2.0854,2.1004,2.1154,2.1304,2.1454],
+[new Date(2017, 7, 29),2.11,2.0869,2.1018,2.1167,2.1316,2.1465],
+[new Date(2017, 7, 28),2.12,2.0865,2.1019,2.1173,2.1327,2.1481],
+[new Date(2017, 7, 25),2.10,2.0846,2.1008,2.117,2.1332,2.1494],
+[new Date(2017, 7, 24),2.09,2.0871,2.103,2.1189,2.1348,2.1507],
+[new Date(2017, 7, 23),2.11,2.0965,2.1095,2.1225,2.1355,2.1485],
+[new Date(2017, 7, 22),2.11,2.0985,2.1114,2.1243,2.1372,2.1501],
+[new Date(2017, 7, 21),2.11,2.1017,2.1142,2.1267,2.1392,2.1517],
+[new Date(2017, 7, 18),2.12,2.108,2.119,2.13,2.141,2.152],
+[new Date(2017, 7, 17),2.15,2.1107,2.1216,2.1325,2.1434,2.1543],
+[new Date(2017, 7, 16),2.13,2.1173,2.122,2.1267,2.1314,2.1361],
+[new Date(2017, 7, 15),2.13,2.115,2.12,2.125,2.13,2.135],
+[new Date(2017, 7, 14),2.12,2.12,2.12,2.12,2.12,2.12],
+]);
+
+        var options = {
+            title: 'Bollinger Band 100 - Frasers Cpt Tr[J69U.SI]',
+            width: 900,
+            height: 500,
+            legend: { position: 'bottom' },
+            chartArea:{left:'10%',top:'10%',width:'85%',height:'75%'},
+            hAxis: {
+                format: 'MMM-d',
+                gridlines: {count: 10}
+            },
+            vAxis: { gridlines: {count: 10} },
+            backgroundColor: {
+                strokeWidth:3,
+                stroke: '#666'
+            }
+        };
+var chart = new google.visualization.LineChart(document.getElementById('STD100'));
+chart.draw(data, options);
+}
+</script>
+<b>Chart of Frasers Cpt Tr[J69U.SI]</b><br/>
+<a href="#MA">MA</a>
+<a href="#STD200">STD200</a>
+<a href="#STD150">STD150</a>
+<a href="#STD100">STD100</a>
+<br/>
+<a name="MA"></a><br/>
+<div id="MA"></div><br/>
+<a name="STD200"></a><br/>
+<div id="STD200"></div><br/>
+<a name="STD150"></a><br/>
+<div id="STD150"></div><br/>
+<a name="STD100"></a><br/>
+<div id="STD100"></div><br/>
+</html>

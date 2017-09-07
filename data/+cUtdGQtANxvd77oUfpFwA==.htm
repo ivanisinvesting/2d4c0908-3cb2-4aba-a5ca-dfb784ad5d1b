@@ -1,0 +1,221 @@
+<html>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawCharts);
+function drawCharts() {
+MA();
+STD200();
+STD150();
+STD100();
+}
+function MA () {
+var data = new google.visualization.DataTable();
+data.addColumn('date', 'Date');
+data.addColumn('number', 'Actual');
+data.addColumn('number', 'MA200');
+data.addColumn('number', 'MA150');
+data.addColumn('number', 'MA100');
+data.addRows([
+[new Date(2017, 8, 6),57.57,55.171,55.171,55.171],
+[new Date(2017, 8, 5),56.97,55.029,55.029,55.029],
+[new Date(2017, 8, 4),56.12,54.908,54.908,54.908],
+[new Date(2017, 8, 1),56.25,54.827,54.827,54.827],
+[new Date(2017, 7, 31),55.96,54.726,54.726,54.726],
+[new Date(2017, 7, 30),54.00,54.631,54.631,54.631],
+[new Date(2017, 7, 29),53.20,54.683,54.683,54.683],
+[new Date(2017, 7, 28),54.86,54.818,54.818,54.818],
+[new Date(2017, 7, 25),54.88,54.814,54.814,54.814],
+[new Date(2017, 7, 24),54.60,54.807,54.807,54.807],
+[new Date(2017, 7, 23),54.77,54.833,54.833,54.833],
+[new Date(2017, 7, 22),55.75,54.841,54.841,54.841],
+[new Date(2017, 7, 21),54.92,54.690,54.690,54.690],
+[new Date(2017, 7, 18),54.92,54.644,54.644,54.644],
+[new Date(2017, 7, 17),55.25,54.575,54.575,54.575],
+[new Date(2017, 7, 16),55.06,54.350,54.350,54.350],
+[new Date(2017, 7, 15),54.22,53.995,53.995,53.995],
+[new Date(2017, 7, 14),53.77,53.770,53.770,53.770],
+]);
+
+        var options = {
+            title: 'Moving Average - UBISOFT ENTERTAIN[UBI.PA]',
+            width: 900,
+            height: 500,
+            legend: { position: 'bottom' },
+            chartArea:{left:'10%',top:'10%',width:'85%',height:'75%'},
+            hAxis: {
+                format: 'MMM-d',
+                gridlines: {count: 10}
+            },
+            vAxis: { gridlines: {count: 10} },
+            backgroundColor: {
+                strokeWidth:3,
+                stroke: '#666'
+            }
+        };
+var chart = new google.visualization.LineChart(document.getElementById('MA'));
+chart.draw(data, options);
+}
+function STD200 () {
+var data = new google.visualization.DataTable();
+data.addColumn('date', 'Date');
+data.addColumn('number', 'Actual');
+data.addColumn('number', 'MA200-2STD');
+data.addColumn('number', 'MA200-1STD');
+data.addColumn('number', 'MA200');
+data.addColumn('number', 'MA200+1STD');
+data.addColumn('number', 'MA200+2STD');
+data.addRows([
+[new Date(2017, 8, 6),57.57,53.0128667486016,54.0917111520786,55.1705555555556,56.2493999590325,57.3282443625095],
+[new Date(2017, 8, 5),56.97,53.1598,54.0946,55.0294,55.9642,56.899],
+[new Date(2017, 8, 4),56.12,53.2609,54.0845,54.9081,55.7317,56.5553],
+[new Date(2017, 8, 1),56.25,53.2537,54.0405,54.8273,55.6141,56.4009],
+[new Date(2017, 7, 31),55.96,53.2997,54.0127,54.7257,55.4387,56.1517],
+[new Date(2017, 7, 30),54.00,53.3326,53.9817,54.6308,55.2799,55.929],
+[new Date(2017, 7, 29),53.20,53.3863,54.0348,54.6833,55.3318,55.9803],
+[new Date(2017, 7, 28),54.86,53.8372,54.3277,54.8182,55.3087,55.7992],
+[new Date(2017, 7, 25),54.88,53.7856,54.2998,54.814,55.3282,55.8424],
+[new Date(2017, 7, 24),54.60,53.7237,54.2652,54.8067,55.3482,55.8897],
+[new Date(2017, 7, 23),54.77,53.6943,54.2634,54.8325,55.4016,55.9707],
+[new Date(2017, 7, 22),55.75,53.6256,54.2335,54.8414,55.4493,56.0572],
+[new Date(2017, 7, 21),54.92,53.6496,54.1698,54.69,55.2102,55.7304],
+[new Date(2017, 7, 18),54.92,53.5268,54.0854,54.644,55.2026,55.7612],
+[new Date(2017, 7, 17),55.25,53.3646,53.9698,54.575,55.1802,55.7854],
+[new Date(2017, 7, 16),55.06,53.2808,53.8154,54.35,54.8846,55.4192],
+[new Date(2017, 7, 15),54.22,53.545,53.77,53.995,54.22,54.445],
+[new Date(2017, 7, 14),53.77,53.77,53.77,53.77,53.77,53.77],
+]);
+
+        var options = {
+            title: 'Bollinger Band 200 - UBISOFT ENTERTAIN[UBI.PA]',
+            width: 900,
+            height: 500,
+            legend: { position: 'bottom' },
+            chartArea:{left:'10%',top:'10%',width:'85%',height:'75%'},
+            hAxis: {
+                format: 'MMM-d',
+                gridlines: {count: 10}
+            },
+            vAxis: { gridlines: {count: 10} },
+            backgroundColor: {
+                strokeWidth:3,
+                stroke: '#666'
+            }
+        };
+var chart = new google.visualization.LineChart(document.getElementById('STD200'));
+chart.draw(data, options);
+}
+function STD150 () {
+var data = new google.visualization.DataTable();
+data.addColumn('date', 'Date');
+data.addColumn('number', 'Actual');
+data.addColumn('number', 'MA150-2STD');
+data.addColumn('number', 'MA150-1STD');
+data.addColumn('number', 'MA150');
+data.addColumn('number', 'MA150+1STD');
+data.addColumn('number', 'MA150+2STD');
+data.addRows([
+[new Date(2017, 8, 6),57.57,53.0128667486016,54.0917111520786,55.1705555555556,56.2493999590325,57.3282443625095],
+[new Date(2017, 8, 5),56.97,53.1598,54.0946,55.0294,55.9642,56.899],
+[new Date(2017, 8, 4),56.12,53.2609,54.0845,54.9081,55.7317,56.5553],
+[new Date(2017, 8, 1),56.25,53.2537,54.0405,54.8273,55.6141,56.4009],
+[new Date(2017, 7, 31),55.96,53.2997,54.0127,54.7257,55.4387,56.1517],
+[new Date(2017, 7, 30),54.00,53.3326,53.9817,54.6308,55.2799,55.929],
+[new Date(2017, 7, 29),53.20,53.3863,54.0348,54.6833,55.3318,55.9803],
+[new Date(2017, 7, 28),54.86,53.8372,54.3277,54.8182,55.3087,55.7992],
+[new Date(2017, 7, 25),54.88,53.7856,54.2998,54.814,55.3282,55.8424],
+[new Date(2017, 7, 24),54.60,53.7237,54.2652,54.8067,55.3482,55.8897],
+[new Date(2017, 7, 23),54.77,53.6943,54.2634,54.8325,55.4016,55.9707],
+[new Date(2017, 7, 22),55.75,53.6256,54.2335,54.8414,55.4493,56.0572],
+[new Date(2017, 7, 21),54.92,53.6496,54.1698,54.69,55.2102,55.7304],
+[new Date(2017, 7, 18),54.92,53.5268,54.0854,54.644,55.2026,55.7612],
+[new Date(2017, 7, 17),55.25,53.3646,53.9698,54.575,55.1802,55.7854],
+[new Date(2017, 7, 16),55.06,53.2808,53.8154,54.35,54.8846,55.4192],
+[new Date(2017, 7, 15),54.22,53.545,53.77,53.995,54.22,54.445],
+[new Date(2017, 7, 14),53.77,53.77,53.77,53.77,53.77,53.77],
+]);
+
+        var options = {
+            title: 'Bollinger Band 150 - UBISOFT ENTERTAIN[UBI.PA]',
+            width: 900,
+            height: 500,
+            legend: { position: 'bottom' },
+            chartArea:{left:'10%',top:'10%',width:'85%',height:'75%'},
+            hAxis: {
+                format: 'MMM-d',
+                gridlines: {count: 10}
+            },
+            vAxis: { gridlines: {count: 10} },
+            backgroundColor: {
+                strokeWidth:3,
+                stroke: '#666'
+            }
+        };
+var chart = new google.visualization.LineChart(document.getElementById('STD150'));
+chart.draw(data, options);
+}
+function STD100 () {
+var data = new google.visualization.DataTable();
+data.addColumn('date', 'Date');
+data.addColumn('number', 'Actual');
+data.addColumn('number', 'MA100-2STD');
+data.addColumn('number', 'MA100-1STD');
+data.addColumn('number', 'MA100');
+data.addColumn('number', 'MA100+1STD');
+data.addColumn('number', 'MA100+2STD');
+data.addRows([
+[new Date(2017, 8, 6),57.57,53.0128667486016,54.0917111520786,55.1705555555556,56.2493999590325,57.3282443625095],
+[new Date(2017, 8, 5),56.97,53.1598,54.0946,55.0294,55.9642,56.899],
+[new Date(2017, 8, 4),56.12,53.2609,54.0845,54.9081,55.7317,56.5553],
+[new Date(2017, 8, 1),56.25,53.2537,54.0405,54.8273,55.6141,56.4009],
+[new Date(2017, 7, 31),55.96,53.2997,54.0127,54.7257,55.4387,56.1517],
+[new Date(2017, 7, 30),54.00,53.3326,53.9817,54.6308,55.2799,55.929],
+[new Date(2017, 7, 29),53.20,53.3863,54.0348,54.6833,55.3318,55.9803],
+[new Date(2017, 7, 28),54.86,53.8372,54.3277,54.8182,55.3087,55.7992],
+[new Date(2017, 7, 25),54.88,53.7856,54.2998,54.814,55.3282,55.8424],
+[new Date(2017, 7, 24),54.60,53.7237,54.2652,54.8067,55.3482,55.8897],
+[new Date(2017, 7, 23),54.77,53.6943,54.2634,54.8325,55.4016,55.9707],
+[new Date(2017, 7, 22),55.75,53.6256,54.2335,54.8414,55.4493,56.0572],
+[new Date(2017, 7, 21),54.92,53.6496,54.1698,54.69,55.2102,55.7304],
+[new Date(2017, 7, 18),54.92,53.5268,54.0854,54.644,55.2026,55.7612],
+[new Date(2017, 7, 17),55.25,53.3646,53.9698,54.575,55.1802,55.7854],
+[new Date(2017, 7, 16),55.06,53.2808,53.8154,54.35,54.8846,55.4192],
+[new Date(2017, 7, 15),54.22,53.545,53.77,53.995,54.22,54.445],
+[new Date(2017, 7, 14),53.77,53.77,53.77,53.77,53.77,53.77],
+]);
+
+        var options = {
+            title: 'Bollinger Band 100 - UBISOFT ENTERTAIN[UBI.PA]',
+            width: 900,
+            height: 500,
+            legend: { position: 'bottom' },
+            chartArea:{left:'10%',top:'10%',width:'85%',height:'75%'},
+            hAxis: {
+                format: 'MMM-d',
+                gridlines: {count: 10}
+            },
+            vAxis: { gridlines: {count: 10} },
+            backgroundColor: {
+                strokeWidth:3,
+                stroke: '#666'
+            }
+        };
+var chart = new google.visualization.LineChart(document.getElementById('STD100'));
+chart.draw(data, options);
+}
+</script>
+<b>Chart of UBISOFT ENTERTAIN[UBI.PA]</b><br/>
+<a href="#MA">MA</a>
+<a href="#STD200">STD200</a>
+<a href="#STD150">STD150</a>
+<a href="#STD100">STD100</a>
+<br/>
+<a name="MA"></a><br/>
+<div id="MA"></div><br/>
+<a name="STD200"></a><br/>
+<div id="STD200"></div><br/>
+<a name="STD150"></a><br/>
+<div id="STD150"></div><br/>
+<a name="STD100"></a><br/>
+<div id="STD100"></div><br/>
+</html>

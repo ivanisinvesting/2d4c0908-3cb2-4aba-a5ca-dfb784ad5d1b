@@ -1,0 +1,217 @@
+<html>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawCharts);
+function drawCharts() {
+MA();
+STD200();
+STD150();
+STD100();
+}
+function MA () {
+var data = new google.visualization.DataTable();
+data.addColumn('date', 'Date');
+data.addColumn('number', 'Actual');
+data.addColumn('number', 'MA200');
+data.addColumn('number', 'MA150');
+data.addColumn('number', 'MA100');
+data.addRows([
+[new Date(2017, 8, 6),3.70,3.749,3.749,3.749],
+[new Date(2017, 8, 5),3.75,3.753,3.753,3.753],
+[new Date(2017, 8, 4),3.78,3.753,3.753,3.753],
+[new Date(2017, 7, 31),3.78,3.751,3.751,3.751],
+[new Date(2017, 7, 30),3.72,3.749,3.749,3.749],
+[new Date(2017, 7, 29),3.71,3.751,3.751,3.751],
+[new Date(2017, 7, 28),3.73,3.755,3.755,3.755],
+[new Date(2017, 7, 25),3.71,3.757,3.757,3.757],
+[new Date(2017, 7, 24),3.74,3.762,3.762,3.762],
+[new Date(2017, 7, 23),3.74,3.765,3.765,3.765],
+[new Date(2017, 7, 22),3.73,3.769,3.769,3.769],
+[new Date(2017, 7, 21),3.73,3.775,3.775,3.775],
+[new Date(2017, 7, 18),3.75,3.784,3.784,3.784],
+[new Date(2017, 7, 17),3.77,3.793,3.793,3.793],
+[new Date(2017, 7, 16),3.82,3.800,3.800,3.800],
+[new Date(2017, 7, 15),3.80,3.790,3.790,3.790],
+[new Date(2017, 7, 14),3.78,3.780,3.780,3.780],
+]);
+
+        var options = {
+            title: 'Moving Average - CapitaLand[C31.SI]',
+            width: 900,
+            height: 500,
+            legend: { position: 'bottom' },
+            chartArea:{left:'10%',top:'10%',width:'85%',height:'75%'},
+            hAxis: {
+                format: 'MMM-d',
+                gridlines: {count: 10}
+            },
+            vAxis: { gridlines: {count: 10} },
+            backgroundColor: {
+                strokeWidth:3,
+                stroke: '#666'
+            }
+        };
+var chart = new google.visualization.LineChart(document.getElementById('MA'));
+chart.draw(data, options);
+}
+function STD200 () {
+var data = new google.visualization.DataTable();
+data.addColumn('date', 'Date');
+data.addColumn('number', 'Actual');
+data.addColumn('number', 'MA200-2STD');
+data.addColumn('number', 'MA200-1STD');
+data.addColumn('number', 'MA200');
+data.addColumn('number', 'MA200+1STD');
+data.addColumn('number', 'MA200+2STD');
+data.addRows([
+[new Date(2017, 8, 6),3.70,3.68344543167588,3.71642859819088,3.74941176470588,3.78239493122089,3.81537809773589],
+[new Date(2017, 8, 5),3.75,3.6895,3.721,3.7525,3.784,3.8155],
+[new Date(2017, 8, 4),3.78,3.6875,3.7201,3.7527,3.7853,3.8179],
+[new Date(2017, 7, 31),3.78,3.6851,3.7179,3.7507,3.7835,3.8163],
+[new Date(2017, 7, 30),3.72,3.6825,3.7155,3.7485,3.7815,3.8145],
+[new Date(2017, 7, 29),3.71,3.6842,3.7175,3.7508,3.7841,3.8174],
+[new Date(2017, 7, 28),3.73,3.6899,3.7222,3.7545,3.7868,3.8191],
+[new Date(2017, 7, 25),3.71,3.6912,3.7241,3.757,3.7899,3.8228],
+[new Date(2017, 7, 24),3.74,3.7012,3.7317,3.7622,3.7927,3.8232],
+[new Date(2017, 7, 23),3.74,3.7026,3.7338,3.765,3.7962,3.8274],
+[new Date(2017, 7, 22),3.73,3.705,3.7368,3.7686,3.8004,3.8322],
+[new Date(2017, 7, 21),3.73,3.7152,3.7451,3.775,3.8049,3.8348],
+[new Date(2017, 7, 18),3.75,3.7356,3.7598,3.784,3.8082,3.8324],
+[new Date(2017, 7, 17),3.77,3.7541,3.7733,3.7925,3.8117,3.8309],
+[new Date(2017, 7, 16),3.82,3.7674,3.7837,3.8,3.8163,3.8326],
+[new Date(2017, 7, 15),3.80,3.77,3.78,3.79,3.8,3.81],
+[new Date(2017, 7, 14),3.78,3.78,3.78,3.78,3.78,3.78],
+]);
+
+        var options = {
+            title: 'Bollinger Band 200 - CapitaLand[C31.SI]',
+            width: 900,
+            height: 500,
+            legend: { position: 'bottom' },
+            chartArea:{left:'10%',top:'10%',width:'85%',height:'75%'},
+            hAxis: {
+                format: 'MMM-d',
+                gridlines: {count: 10}
+            },
+            vAxis: { gridlines: {count: 10} },
+            backgroundColor: {
+                strokeWidth:3,
+                stroke: '#666'
+            }
+        };
+var chart = new google.visualization.LineChart(document.getElementById('STD200'));
+chart.draw(data, options);
+}
+function STD150 () {
+var data = new google.visualization.DataTable();
+data.addColumn('date', 'Date');
+data.addColumn('number', 'Actual');
+data.addColumn('number', 'MA150-2STD');
+data.addColumn('number', 'MA150-1STD');
+data.addColumn('number', 'MA150');
+data.addColumn('number', 'MA150+1STD');
+data.addColumn('number', 'MA150+2STD');
+data.addRows([
+[new Date(2017, 8, 6),3.70,3.68344543167588,3.71642859819088,3.74941176470588,3.78239493122089,3.81537809773589],
+[new Date(2017, 8, 5),3.75,3.6895,3.721,3.7525,3.784,3.8155],
+[new Date(2017, 8, 4),3.78,3.6875,3.7201,3.7527,3.7853,3.8179],
+[new Date(2017, 7, 31),3.78,3.6851,3.7179,3.7507,3.7835,3.8163],
+[new Date(2017, 7, 30),3.72,3.6825,3.7155,3.7485,3.7815,3.8145],
+[new Date(2017, 7, 29),3.71,3.6842,3.7175,3.7508,3.7841,3.8174],
+[new Date(2017, 7, 28),3.73,3.6899,3.7222,3.7545,3.7868,3.8191],
+[new Date(2017, 7, 25),3.71,3.6912,3.7241,3.757,3.7899,3.8228],
+[new Date(2017, 7, 24),3.74,3.7012,3.7317,3.7622,3.7927,3.8232],
+[new Date(2017, 7, 23),3.74,3.7026,3.7338,3.765,3.7962,3.8274],
+[new Date(2017, 7, 22),3.73,3.705,3.7368,3.7686,3.8004,3.8322],
+[new Date(2017, 7, 21),3.73,3.7152,3.7451,3.775,3.8049,3.8348],
+[new Date(2017, 7, 18),3.75,3.7356,3.7598,3.784,3.8082,3.8324],
+[new Date(2017, 7, 17),3.77,3.7541,3.7733,3.7925,3.8117,3.8309],
+[new Date(2017, 7, 16),3.82,3.7674,3.7837,3.8,3.8163,3.8326],
+[new Date(2017, 7, 15),3.80,3.77,3.78,3.79,3.8,3.81],
+[new Date(2017, 7, 14),3.78,3.78,3.78,3.78,3.78,3.78],
+]);
+
+        var options = {
+            title: 'Bollinger Band 150 - CapitaLand[C31.SI]',
+            width: 900,
+            height: 500,
+            legend: { position: 'bottom' },
+            chartArea:{left:'10%',top:'10%',width:'85%',height:'75%'},
+            hAxis: {
+                format: 'MMM-d',
+                gridlines: {count: 10}
+            },
+            vAxis: { gridlines: {count: 10} },
+            backgroundColor: {
+                strokeWidth:3,
+                stroke: '#666'
+            }
+        };
+var chart = new google.visualization.LineChart(document.getElementById('STD150'));
+chart.draw(data, options);
+}
+function STD100 () {
+var data = new google.visualization.DataTable();
+data.addColumn('date', 'Date');
+data.addColumn('number', 'Actual');
+data.addColumn('number', 'MA100-2STD');
+data.addColumn('number', 'MA100-1STD');
+data.addColumn('number', 'MA100');
+data.addColumn('number', 'MA100+1STD');
+data.addColumn('number', 'MA100+2STD');
+data.addRows([
+[new Date(2017, 8, 6),3.70,3.68344543167588,3.71642859819088,3.74941176470588,3.78239493122089,3.81537809773589],
+[new Date(2017, 8, 5),3.75,3.6895,3.721,3.7525,3.784,3.8155],
+[new Date(2017, 8, 4),3.78,3.6875,3.7201,3.7527,3.7853,3.8179],
+[new Date(2017, 7, 31),3.78,3.6851,3.7179,3.7507,3.7835,3.8163],
+[new Date(2017, 7, 30),3.72,3.6825,3.7155,3.7485,3.7815,3.8145],
+[new Date(2017, 7, 29),3.71,3.6842,3.7175,3.7508,3.7841,3.8174],
+[new Date(2017, 7, 28),3.73,3.6899,3.7222,3.7545,3.7868,3.8191],
+[new Date(2017, 7, 25),3.71,3.6912,3.7241,3.757,3.7899,3.8228],
+[new Date(2017, 7, 24),3.74,3.7012,3.7317,3.7622,3.7927,3.8232],
+[new Date(2017, 7, 23),3.74,3.7026,3.7338,3.765,3.7962,3.8274],
+[new Date(2017, 7, 22),3.73,3.705,3.7368,3.7686,3.8004,3.8322],
+[new Date(2017, 7, 21),3.73,3.7152,3.7451,3.775,3.8049,3.8348],
+[new Date(2017, 7, 18),3.75,3.7356,3.7598,3.784,3.8082,3.8324],
+[new Date(2017, 7, 17),3.77,3.7541,3.7733,3.7925,3.8117,3.8309],
+[new Date(2017, 7, 16),3.82,3.7674,3.7837,3.8,3.8163,3.8326],
+[new Date(2017, 7, 15),3.80,3.77,3.78,3.79,3.8,3.81],
+[new Date(2017, 7, 14),3.78,3.78,3.78,3.78,3.78,3.78],
+]);
+
+        var options = {
+            title: 'Bollinger Band 100 - CapitaLand[C31.SI]',
+            width: 900,
+            height: 500,
+            legend: { position: 'bottom' },
+            chartArea:{left:'10%',top:'10%',width:'85%',height:'75%'},
+            hAxis: {
+                format: 'MMM-d',
+                gridlines: {count: 10}
+            },
+            vAxis: { gridlines: {count: 10} },
+            backgroundColor: {
+                strokeWidth:3,
+                stroke: '#666'
+            }
+        };
+var chart = new google.visualization.LineChart(document.getElementById('STD100'));
+chart.draw(data, options);
+}
+</script>
+<b>Chart of CapitaLand[C31.SI]</b><br/>
+<a href="#MA">MA</a>
+<a href="#STD200">STD200</a>
+<a href="#STD150">STD150</a>
+<a href="#STD100">STD100</a>
+<br/>
+<a name="MA"></a><br/>
+<div id="MA"></div><br/>
+<a name="STD200"></a><br/>
+<div id="STD200"></div><br/>
+<a name="STD150"></a><br/>
+<div id="STD150"></div><br/>
+<a name="STD100"></a><br/>
+<div id="STD100"></div><br/>
+</html>
