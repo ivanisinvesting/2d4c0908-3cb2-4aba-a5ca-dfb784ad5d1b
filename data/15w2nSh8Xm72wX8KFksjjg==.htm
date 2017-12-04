@@ -23,6 +23,7 @@ data.addColumn('number', 'MA200');
 data.addColumn('number', 'MA150');
 data.addColumn('number', 'MA100');
 data.addRows([
+[new Date(2017, 11, 4),1.80,1.981,1.940,1.803],
 [new Date(2017, 11, 1),1.80,1.983,1.942,1.806],
 [new Date(2017, 10, 30),1.80,1.984,1.945,1.809],
 [new Date(2017, 10, 29),1.78,1.985,1.947,1.811],
@@ -322,7 +323,6 @@ data.addRows([
 [new Date(2016, 8, 29),2.35,2.558,2.564,2.578],
 [new Date(2016, 8, 28),2.37,2.559,2.565,2.578],
 [new Date(2016, 8, 27),2.37,2.561,2.566,2.579],
-[new Date(2016, 8, 26),2.37,2.563,2.568,2.579],
 ]);
 
         var options = {
@@ -355,6 +355,7 @@ data.addColumn('number', 'MA200');
 data.addColumn('number', 'MA200+1STD');
 data.addColumn('number', 'MA200+2STD');
 data.addRows([
+[new Date(2017, 11, 4),1.80,1.59990795224374,1.79051647612187,1.981125,2.17173352387813,2.36234204775626],
 [new Date(2017, 11, 1),1.80,1.6019,1.7922,1.9825,2.1728,2.3631],
 [new Date(2017, 10, 30),1.80,1.6039,1.7938,1.9837,2.1736,2.3635],
 [new Date(2017, 10, 29),1.78,1.606,1.7955,1.985,2.1745,2.364],
@@ -654,7 +655,6 @@ data.addRows([
 [new Date(2016, 8, 29),2.35,2.2778,2.4177,2.5576,2.6975,2.8374],
 [new Date(2016, 8, 28),2.37,2.2804,2.4199,2.5594,2.6989,2.8384],
 [new Date(2016, 8, 27),2.37,2.2827,2.4219,2.5611,2.7003,2.8395],
-[new Date(2016, 8, 26),2.37,2.2847,2.4238,2.5629,2.702,2.8411],
 ]);
 
         var options = {
@@ -687,6 +687,7 @@ data.addColumn('number', 'MA150');
 data.addColumn('number', 'MA150+1STD');
 data.addColumn('number', 'MA150+2STD');
 data.addRows([
+[new Date(2017, 11, 4),1.80,1.53536807364906,1.73753403682453,1.9397,2.14186596317547,2.34403192635095],
 [new Date(2017, 11, 1),1.80,1.5368,1.7395,1.9422,2.1449,2.3476],
 [new Date(2017, 10, 30),1.80,1.5382,1.7414,1.9446,2.1478,2.351],
 [new Date(2017, 10, 29),1.78,1.5402,1.7434,1.9466,2.1498,2.353],
@@ -986,7 +987,6 @@ data.addRows([
 [new Date(2016, 8, 29),2.35,2.2899,2.4267,2.5635,2.7003,2.8371],
 [new Date(2016, 8, 28),2.37,2.2935,2.4292,2.5649,2.7006,2.8363],
 [new Date(2016, 8, 27),2.37,2.2968,2.4316,2.5664,2.7012,2.836],
-[new Date(2016, 8, 26),2.37,2.2999,2.4337,2.5675,2.7013,2.8351],
 ]);
 
         var options = {
@@ -1019,6 +1019,7 @@ data.addColumn('number', 'MA100');
 data.addColumn('number', 'MA100+1STD');
 data.addColumn('number', 'MA100+2STD');
 data.addRows([
+[new Date(2017, 11, 4),1.80,1.67795087929965,1.74050043964983,1.80305,1.86559956035017,1.92814912070035],
 [new Date(2017, 11, 1),1.80,1.6712,1.7384,1.8056,1.8728,1.94],
 [new Date(2017, 10, 30),1.80,1.6627,1.7356,1.8085,1.8814,1.9543],
 [new Date(2017, 10, 29),1.78,1.6552,1.7333,1.8114,1.8895,1.9676],
@@ -1318,7 +1319,6 @@ data.addRows([
 [new Date(2016, 8, 29),2.35,2.2617,2.4197,2.5777,2.7357,2.8937],
 [new Date(2016, 8, 28),2.37,2.2639,2.4211,2.5783,2.7355,2.8927],
 [new Date(2016, 8, 27),2.37,2.2651,2.4219,2.5787,2.7355,2.8923],
-[new Date(2016, 8, 26),2.37,2.2668,2.423,2.5792,2.7354,2.8916],
 ]);
 
         var options = {
@@ -1345,7 +1345,7 @@ function NaAndDebt () {
 var data = new google.visualization.DataTable();
 data.addColumn('string', 'Date and Reporting Period');
 data.addColumn('number', 'Net Asset - Net Assets (S$m)');
-data.addColumn('number', 'Debt - Aggregate amount of Group's borrowings and debt securities (S$000)');
+data.addColumn('number', 'Debt - Aggregate amount of Groups borrowings and debt securities (S$000)');
 data.addRows([
 ['12 Q1',368.1,269],
 ['12 Q2',333.7,281],
@@ -1445,8 +1445,7 @@ chart.draw(data, options);
 function HistoricalShares () {
 var data = new google.visualization.DataTable();
 data.addColumn('string', 'Date and Reporting Period');
-data.addColumn('number', 'Shares - Weighted average number of
-shares (000)');
+data.addColumn('number', 'Shares - Weighted average number of shares (000)');
 data.addRows([
 ['12 Q1',909117],
 ['12 Q2',909117],
@@ -1499,6 +1498,7 @@ data.addColumn('date', 'Date');
 data.addColumn('number', 'Price');
 data.addColumn('number', 'PB');
 data.addRows([
+[new Date(2017, 11, 4),1.80,.04],
 [new Date(2017, 11, 1),1.80,.04],
 [new Date(2017, 10, 30),1.80,.04],
 [new Date(2017, 10, 29),1.78,.04],
@@ -2751,8 +2751,6 @@ data.addRows([
 [new Date(2012, 11, 7),2.75,.07],
 [new Date(2012, 11, 6),2.72,.07],
 [new Date(2012, 11, 5),2.70,.07],
-[new Date(2012, 11, 4),2.69,.07],
-[new Date(2012, 11, 3),2.69,.07],
 ]);
 
         var options = {
@@ -2790,6 +2788,7 @@ data.addColumn('date', 'Date');
 data.addColumn('number', 'Price');
 data.addColumn('number', 'PE');
 data.addRows([
+[new Date(2017, 11, 4),1.80,12.6],
 [new Date(2017, 11, 1),1.80,12.6],
 [new Date(2017, 10, 30),1.80,12.6],
 [new Date(2017, 10, 29),1.78,12.4],
@@ -4042,8 +4041,6 @@ data.addRows([
 [new Date(2012, 11, 7),2.75,17.2],
 [new Date(2012, 11, 6),2.72,17.0],
 [new Date(2012, 11, 5),2.70,16.9],
-[new Date(2012, 11, 4),2.69,16.8],
-[new Date(2012, 11, 3),2.69,16.8],
 ]);
 
         var options = {
@@ -4081,6 +4078,7 @@ data.addColumn('date', 'Date');
 data.addColumn('number', 'Price');
 data.addColumn('number', 'DivYield');
 data.addRows([
+[new Date(2017, 11, 4),1.80,6.2],
 [new Date(2017, 11, 1),1.80,6.2],
 [new Date(2017, 10, 30),1.80,6.2],
 [new Date(2017, 10, 29),1.78,6.2],
@@ -5333,8 +5331,6 @@ data.addRows([
 [new Date(2012, 11, 7),2.75,5.3],
 [new Date(2012, 11, 6),2.72,5.4],
 [new Date(2012, 11, 5),2.70,5.4],
-[new Date(2012, 11, 4),2.69,5.4],
-[new Date(2012, 11, 3),2.69,5.4],
 ]);
 
         var options = {
