@@ -8,7 +8,7 @@ MA();
 STD100();
 STD150();
 STD200();
-STD270();
+STD250();
 PE();
 PB();
 NaAndDebt();
@@ -25,7 +25,7 @@ data.addColumn('number', 'Actual');
 data.addColumn('number', 'MA100');
 data.addColumn('number', 'MA150');
 data.addColumn('number', 'MA200');
-data.addColumn('number', 'MA270');
+data.addColumn('number', 'MA250');
 data.addRows([[new Date(2018, 3, 13),0.81,0.825,0.825,0.823,0.823],
 [new Date(2018, 3, 12),0.81,0.825,0.825,0.823,0.823],
 [new Date(2018, 3, 11),0.81,0.825,0.825,0.823,0.823],
@@ -885,15 +885,15 @@ var chart = new google.visualization.LineChart(document.getElementById('STD200')
 chart.draw(data, options);
 }
 
-function STD270 () {
+function STD250 () {
 var data = new google.visualization.DataTable();
 data.addColumn('date', 'Date');
 data.addColumn('number', 'Actual');
-data.addColumn('number', 'MA270-2STD');
-data.addColumn('number', 'MA270-1STD');
-data.addColumn('number', 'MA270');
-data.addColumn('number', 'MA270+1STD');
-data.addColumn('number', 'MA270+2STD');
+data.addColumn('number', 'MA250-2STD');
+data.addColumn('number', 'MA250-1STD');
+data.addColumn('number', 'MA250');
+data.addColumn('number', 'MA250+1STD');
+data.addColumn('number', 'MA250+2STD');
 data.addRows([[new Date(2018, 3, 13),0.81,0.8054,0.814,0.8226,0.8312,0.8398],
 [new Date(2018, 3, 12),0.81,0.8054,0.814,0.8226,0.8312,0.8398],
 [new Date(2018, 3, 11),0.81,0.8057,0.8142,0.8227,0.8312,0.8397],
@@ -1082,7 +1082,7 @@ data.addRows([[new Date(2018, 3, 13),0.81,0.8054,0.814,0.8226,0.8312,0.8398],
 [new Date(2017, 6, 19),0.81,0.81,0.81,0.81,0.81,0.81],
 ]);
 var options = {
-    title: 'Bollinger Band 270 - NetLink NBN Tr (CJLU.SI)',
+    title: 'Bollinger Band 250 - NetLink NBN Tr (CJLU.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -1098,7 +1098,7 @@ var options = {
         stroke: '#666'
     }
 };
-var chart = new google.visualization.LineChart(document.getElementById('STD270'));
+var chart = new google.visualization.LineChart(document.getElementById('STD250'));
 chart.draw(data, options);
 }
 
@@ -1882,7 +1882,7 @@ chart.draw(data, options);
 <a href='#STD100'>STD100</a>
 <a href='#STD150'>STD150</a>
 <a href='#STD200'>STD200</a>
-<a href='#STD270'>STD270</a>
+<a href='#STD250'>STD250</a>
 <a href='#PE'>PE</a>
 <a href='#PB'>PB</a>
 <a href='#NaAndDebt'>NaAndDebt</a>
@@ -1895,7 +1895,7 @@ chart.draw(data, options);
 <a name='STD100'></a><br/><div id='STD100'></div><br/>
 <a name='STD150'></a><br/><div id='STD150'></div><br/>
 <a name='STD200'></a><br/><div id='STD200'></div><br/>
-<a name='STD270'></a><br/><div id='STD270'></div><br/>
+<a name='STD250'></a><br/><div id='STD250'></div><br/>
 <a name='PE'></a><br/>PE: Max[256.1(2017-09-07)] vs Min[91.0(2018-04-04)]<br/><div id='PE'></div><br/>
 <a name='PB'></a><br/>PB: Max[0.0(2017-09-07)] vs Min[0.0(2018-04-04)]<br/><div id='PB'></div><br/>
 <a name='NaAndDebt'></a><br/><div id='NaAndDebt'></div><br/>
