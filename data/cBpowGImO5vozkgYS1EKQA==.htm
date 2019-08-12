@@ -1,0 +1,199 @@
+<html>
+<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+<script type='text/javascript'>
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawCharts);
+function drawCharts() {
+MA();
+STD100();
+STD150();
+STD200();
+STD170();
+}
+
+function MA () {
+var data = new google.visualization.DataTable();
+data.addColumn('date', 'Date');
+data.addColumn('number', 'Actual');
+data.addColumn('number', 'MA100');
+data.addColumn('number', 'MA150');
+data.addColumn('number', 'MA200');
+data.addColumn('number', 'MA170');
+data.addRows([[new Date(2019, 6, 18),0.77,0.755,0.755,0.755,0.755],
+[new Date(2019, 6, 16),0.76,0.748,0.748,0.748,0.748],
+[new Date(2019, 6, 15),0.74,0.740,0.740,0.740,0.740],
+]);
+var options = {
+    title: 'Moving Average - Reit_Industrial (CSFU.SI)',
+    width: 900,
+    height: 500,
+    legend: { position: 'bottom' },
+    chartArea:{left:'10%',top:'10%',width:'85%',height:'75%'},
+    hAxis: {
+        format: 'MMM-d',
+        gridlines: {count: 10}
+    },
+    
+    vAxis: { gridlines: {count: 10} },
+    backgroundColor: {
+        strokeWidth:3,
+        stroke: '#666'
+    }
+};
+var chart = new google.visualization.LineChart(document.getElementById('MA'));
+chart.draw(data, options);
+}
+
+function STD100 () {
+var data = new google.visualization.DataTable();
+data.addColumn('date', 'Date');
+data.addColumn('number', 'Actual');
+data.addColumn('number', 'MA100-2STD');
+data.addColumn('number', 'MA100-1STD');
+data.addColumn('number', 'MA100');
+data.addColumn('number', 'MA100+1STD');
+data.addColumn('number', 'MA100+2STD');
+data.addRows([[new Date(2019, 6, 18),0.77,0.7306,0.7428,0.755,0.7672,0.7794],
+[new Date(2019, 6, 16),0.76,0.7325,0.74,0.7475,0.755,0.7625],
+[new Date(2019, 6, 15),0.74,0.74,0.74,0.74,0.74,0.74],
+]);
+var options = {
+    title: 'Bollinger Band 100 - Reit_Industrial (CSFU.SI)',
+    width: 900,
+    height: 500,
+    legend: { position: 'bottom' },
+    chartArea:{left:'10%',top:'10%',width:'85%',height:'75%'},
+    hAxis: {
+        format: 'MMM-d',
+        gridlines: {count: 10}
+    },
+    
+    vAxis: { gridlines: {count: 10} },
+    backgroundColor: {
+        strokeWidth:3,
+        stroke: '#666'
+    }
+};
+var chart = new google.visualization.LineChart(document.getElementById('STD100'));
+chart.draw(data, options);
+}
+
+function STD150 () {
+var data = new google.visualization.DataTable();
+data.addColumn('date', 'Date');
+data.addColumn('number', 'Actual');
+data.addColumn('number', 'MA150-2STD');
+data.addColumn('number', 'MA150-1STD');
+data.addColumn('number', 'MA150');
+data.addColumn('number', 'MA150+1STD');
+data.addColumn('number', 'MA150+2STD');
+data.addRows([[new Date(2019, 6, 18),0.77,0.7306,0.7428,0.755,0.7672,0.7794],
+[new Date(2019, 6, 16),0.76,0.7325,0.74,0.7475,0.755,0.7625],
+[new Date(2019, 6, 15),0.74,0.74,0.74,0.74,0.74,0.74],
+]);
+var options = {
+    title: 'Bollinger Band 150 - Reit_Industrial (CSFU.SI)',
+    width: 900,
+    height: 500,
+    legend: { position: 'bottom' },
+    chartArea:{left:'10%',top:'10%',width:'85%',height:'75%'},
+    hAxis: {
+        format: 'MMM-d',
+        gridlines: {count: 10}
+    },
+    
+    vAxis: { gridlines: {count: 10} },
+    backgroundColor: {
+        strokeWidth:3,
+        stroke: '#666'
+    }
+};
+var chart = new google.visualization.LineChart(document.getElementById('STD150'));
+chart.draw(data, options);
+}
+
+function STD200 () {
+var data = new google.visualization.DataTable();
+data.addColumn('date', 'Date');
+data.addColumn('number', 'Actual');
+data.addColumn('number', 'MA200-2STD');
+data.addColumn('number', 'MA200-1STD');
+data.addColumn('number', 'MA200');
+data.addColumn('number', 'MA200+1STD');
+data.addColumn('number', 'MA200+2STD');
+data.addRows([[new Date(2019, 6, 18),0.77,0.7306,0.7428,0.755,0.7672,0.7794],
+[new Date(2019, 6, 16),0.76,0.7325,0.74,0.7475,0.755,0.7625],
+[new Date(2019, 6, 15),0.74,0.74,0.74,0.74,0.74,0.74],
+]);
+var options = {
+    title: 'Bollinger Band 200 - Reit_Industrial (CSFU.SI)',
+    width: 900,
+    height: 500,
+    legend: { position: 'bottom' },
+    chartArea:{left:'10%',top:'10%',width:'85%',height:'75%'},
+    hAxis: {
+        format: 'MMM-d',
+        gridlines: {count: 10}
+    },
+    
+    vAxis: { gridlines: {count: 10} },
+    backgroundColor: {
+        strokeWidth:3,
+        stroke: '#666'
+    }
+};
+var chart = new google.visualization.LineChart(document.getElementById('STD200'));
+chart.draw(data, options);
+}
+
+function STD170 () {
+var data = new google.visualization.DataTable();
+data.addColumn('date', 'Date');
+data.addColumn('number', 'Actual');
+data.addColumn('number', 'MA170-2STD');
+data.addColumn('number', 'MA170-1STD');
+data.addColumn('number', 'MA170');
+data.addColumn('number', 'MA170+1STD');
+data.addColumn('number', 'MA170+2STD');
+data.addRows([[new Date(2019, 6, 18),0.77,0.7306,0.7428,0.755,0.7672,0.7794],
+[new Date(2019, 6, 16),0.76,0.7325,0.74,0.7475,0.755,0.7625],
+[new Date(2019, 6, 15),0.74,0.74,0.74,0.74,0.74,0.74],
+]);
+var options = {
+    title: 'Bollinger Band 170 - Reit_Industrial (CSFU.SI)',
+    width: 900,
+    height: 500,
+    legend: { position: 'bottom' },
+    chartArea:{left:'10%',top:'10%',width:'85%',height:'75%'},
+    hAxis: {
+        format: 'MMM-d',
+        gridlines: {count: 10}
+    },
+    
+    vAxis: { gridlines: {count: 10} },
+    backgroundColor: {
+        strokeWidth:3,
+        stroke: '#666'
+    }
+};
+var chart = new google.visualization.LineChart(document.getElementById('STD170'));
+chart.draw(data, options);
+}
+</script>
+<head>
+<title>Reit_Industrial (CSFU.SI)</title>
+</head>
+<body>
+<a href='#MA'>MA</a>
+<a href='#STD100'>STD100</a>
+<a href='#STD150'>STD150</a>
+<a href='#STD200'>STD200</a>
+<a href='#STD170'>STD170</a>
+<br/>
+<a name='MA'></a><br/><div id='MA'></div><br/>
+<a name='STD100'></a><br/><div id='STD100'></div><br/>
+<a name='STD150'></a><br/><div id='STD150'></div><br/>
+<a name='STD200'></a><br/><div id='STD200'></div><br/>
+<a name='STD170'></a><br/><div id='STD170'></div><br/>
+</body>
+</html>
