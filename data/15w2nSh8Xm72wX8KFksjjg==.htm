@@ -8,7 +8,7 @@ MA();
 STD100();
 STD150();
 STD200();
-STD110();
+STD140();
 PE();
 PB();
 NaAndDebt();
@@ -25,13 +25,11 @@ data.addColumn('number', 'Actual');
 data.addColumn('number', 'MA100');
 data.addColumn('number', 'MA150');
 data.addColumn('number', 'MA200');
-data.addColumn('number', 'MA110');
-data.addRows([[new Date(2019, 6, 18),2.05,2.050,2.050,2.050,2.050],
-[new Date(2019, 6, 16),2.05,2.050,2.050,2.050,2.050],
-[new Date(2019, 5, 28),2.05,2.050,2.050,2.050,2.050],
+data.addColumn('number', 'MA140');
+data.addRows([[new Date(2019, 5, 28),2.05,2.050,2.050,2.050,2.050],
 ]);
 var options = {
-    title: 'Moving Average - Telco (B2F.SI)',
+    title: 'Moving Average - M1 (B2F.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -60,12 +58,10 @@ data.addColumn('number', 'MA100-1STD');
 data.addColumn('number', 'MA100');
 data.addColumn('number', 'MA100+1STD');
 data.addColumn('number', 'MA100+2STD');
-data.addRows([[new Date(2019, 6, 18),2.05,2.05,2.05,2.05,2.05,2.05],
-[new Date(2019, 6, 16),2.05,2.05,2.05,2.05,2.05,2.05],
-[new Date(2019, 5, 28),2.05,2.05,2.05,2.05,2.05,2.05],
+data.addRows([[new Date(2019, 5, 28),2.05,2.05,2.05,2.05,2.05,2.05],
 ]);
 var options = {
-    title: 'Bollinger Band 100 - Telco (B2F.SI)',
+    title: 'Bollinger Band 100 - M1 (B2F.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -94,12 +90,10 @@ data.addColumn('number', 'MA150-1STD');
 data.addColumn('number', 'MA150');
 data.addColumn('number', 'MA150+1STD');
 data.addColumn('number', 'MA150+2STD');
-data.addRows([[new Date(2019, 6, 18),2.05,2.05,2.05,2.05,2.05,2.05],
-[new Date(2019, 6, 16),2.05,2.05,2.05,2.05,2.05,2.05],
-[new Date(2019, 5, 28),2.05,2.05,2.05,2.05,2.05,2.05],
+data.addRows([[new Date(2019, 5, 28),2.05,2.05,2.05,2.05,2.05,2.05],
 ]);
 var options = {
-    title: 'Bollinger Band 150 - Telco (B2F.SI)',
+    title: 'Bollinger Band 150 - M1 (B2F.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -128,12 +122,10 @@ data.addColumn('number', 'MA200-1STD');
 data.addColumn('number', 'MA200');
 data.addColumn('number', 'MA200+1STD');
 data.addColumn('number', 'MA200+2STD');
-data.addRows([[new Date(2019, 6, 18),2.05,2.05,2.05,2.05,2.05,2.05],
-[new Date(2019, 6, 16),2.05,2.05,2.05,2.05,2.05,2.05],
-[new Date(2019, 5, 28),2.05,2.05,2.05,2.05,2.05,2.05],
+data.addRows([[new Date(2019, 5, 28),2.05,2.05,2.05,2.05,2.05,2.05],
 ]);
 var options = {
-    title: 'Bollinger Band 200 - Telco (B2F.SI)',
+    title: 'Bollinger Band 200 - M1 (B2F.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -153,21 +145,19 @@ var chart = new google.visualization.LineChart(document.getElementById('STD200')
 chart.draw(data, options);
 }
 
-function STD110 () {
+function STD140 () {
 var data = new google.visualization.DataTable();
 data.addColumn('date', 'Date');
 data.addColumn('number', 'Actual');
-data.addColumn('number', 'MA110-2STD');
-data.addColumn('number', 'MA110-1STD');
-data.addColumn('number', 'MA110');
-data.addColumn('number', 'MA110+1STD');
-data.addColumn('number', 'MA110+2STD');
-data.addRows([[new Date(2019, 6, 18),2.05,2.05,2.05,2.05,2.05,2.05],
-[new Date(2019, 6, 16),2.05,2.05,2.05,2.05,2.05,2.05],
-[new Date(2019, 5, 28),2.05,2.05,2.05,2.05,2.05,2.05],
+data.addColumn('number', 'MA140-2STD');
+data.addColumn('number', 'MA140-1STD');
+data.addColumn('number', 'MA140');
+data.addColumn('number', 'MA140+1STD');
+data.addColumn('number', 'MA140+2STD');
+data.addRows([[new Date(2019, 5, 28),2.05,2.05,2.05,2.05,2.05,2.05],
 ]);
 var options = {
-    title: 'Bollinger Band 110 - Telco (B2F.SI)',
+    title: 'Bollinger Band 140 - M1 (B2F.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -183,7 +173,7 @@ var options = {
         stroke: '#666'
     }
 };
-var chart = new google.visualization.LineChart(document.getElementById('STD110'));
+var chart = new google.visualization.LineChart(document.getElementById('STD140'));
 chart.draw(data, options);
 }
 
@@ -192,12 +182,10 @@ var data = new google.visualization.DataTable();
 data.addColumn('date', 'Date');
 data.addColumn('number', 'Price');
 data.addColumn('number', 'PE');
-data.addRows([[new Date(2019, 6, 18),2.05,14.5],
-[new Date(2019, 6, 16),2.05,14.5],
-[new Date(2019, 5, 28),2.05,14.5],
+data.addRows([[new Date(2019, 5, 28),2.05,14.5],
 ]);
 var options = {
-    title: '5-year Price vs PE - Telco (B2F.SI)',
+    title: '5-year Price vs PE - M1 (B2F.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -230,12 +218,10 @@ var data = new google.visualization.DataTable();
 data.addColumn('date', 'Date');
 data.addColumn('number', 'Price');
 data.addColumn('number', 'PB');
-data.addRows([[new Date(2019, 6, 18),2.05,.04],
-[new Date(2019, 6, 16),2.05,.04],
-[new Date(2019, 5, 28),2.05,.04],
+data.addRows([[new Date(2019, 5, 28),2.05,.04],
 ]);
 var options = {
-    title: '5-year Price vs PB - Telco (B2F.SI)',
+    title: '5-year Price vs PB - M1 (B2F.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -275,7 +261,7 @@ data.addRows([['2014',394.6,302],
 ['2018',523.2,450],
 ]);
 var options = {
-    title: 'Historical Net Asset & Debt - Telco (B2F.SI)',
+    title: 'Historical Net Asset & Debt - M1 (B2F.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -306,7 +292,7 @@ data.addRows([['2014',42.4],
 ['2018',56.3],
 ]);
 var options = {
-    title: 'Historical Net Asset Value - Telco (B2F.SI)',
+    title: 'Historical Net Asset Value - M1 (B2F.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -331,12 +317,10 @@ var data = new google.visualization.DataTable();
 data.addColumn('date', 'Date');
 data.addColumn('number', 'Price');
 data.addColumn('number', 'DivYield');
-data.addRows([[new Date(2019, 6, 18),2.05,5.5],
-[new Date(2019, 6, 16),2.05,5.5],
-[new Date(2019, 5, 28),2.05,5.5],
+data.addRows([[new Date(2019, 5, 28),2.05,5.5],
 ]);
 var options = {
-    title: '5-year Price vs DivYield - Telco (B2F.SI)',
+    title: '5-year Price vs DivYield - M1 (B2F.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -375,7 +359,7 @@ data.addRows([['2014',100.0],
 ['2018',79.4],
 ]);
 var options = {
-    title: 'Dividend Payout Ratio - Telco (B2F.SI)',
+    title: 'Dividend Payout Ratio - M1 (B2F.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -406,7 +390,7 @@ data.addRows([['2014',931047],
 ['2018',925578],
 ]);
 var options = {
-    title: 'Historical Shares - Telco (B2F.SI)',
+    title: 'Historical Shares - M1 (B2F.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -427,14 +411,14 @@ chart.draw(data, options);
 }
 </script>
 <head>
-<title>Telco (B2F.SI)</title>
+<title>M1 (B2F.SI)</title>
 </head>
 <body>
 <a href='#MA'>MA</a>
 <a href='#STD100'>STD100</a>
 <a href='#STD150'>STD150</a>
 <a href='#STD200'>STD200</a>
-<a href='#STD110'>STD110</a>
+<a href='#STD140'>STD140</a>
 <a href='#PE'>PE</a>
 <a href='#PB'>PB</a>
 <a href='#NaAndDebt'>NaAndDebt</a>
@@ -447,7 +431,7 @@ chart.draw(data, options);
 <a name='STD100'></a><br/><div id='STD100'></div><br/>
 <a name='STD150'></a><br/><div id='STD150'></div><br/>
 <a name='STD200'></a><br/><div id='STD200'></div><br/>
-<a name='STD110'></a><br/><div id='STD110'></div><br/>
+<a name='STD140'></a><br/><div id='STD140'></div><br/>
 <a name='PE'></a><br/>PE: Max[14.5(2019-06-28)] vs Min[14.5(2019-06-28)]<br/><div id='PE'></div><br/>
 <a name='PB'></a><br/>PB: Max[0.0(2019-06-28)] vs Min[0.0(2019-06-28)]<br/><div id='PB'></div><br/>
 <a name='NaAndDebt'></a><br/><div id='NaAndDebt'></div><br/>

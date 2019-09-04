@@ -8,7 +8,7 @@ MA();
 STD100();
 STD150();
 STD200();
-STD10();
+STD30();
 }
 
 function MA () {
@@ -18,13 +18,11 @@ data.addColumn('number', 'Actual');
 data.addColumn('number', 'MA100');
 data.addColumn('number', 'MA150');
 data.addColumn('number', 'MA200');
-data.addColumn('number', 'MA10');
-data.addRows([[new Date(2019, 6, 18),1.28,1.287,1.287,1.287,1.287],
-[new Date(2019, 6, 16),1.29,1.290,1.290,1.290,1.290],
-[new Date(2019, 6, 12),1.29,1.290,1.290,1.290,1.290],
+data.addColumn('number', 'MA30');
+data.addRows([[new Date(2019, 6, 29),1.29,1.290,1.290,1.290,1.290],
 ]);
 var options = {
-    title: 'Moving Average - Reit_Industrial (BWQU.SI)',
+    title: 'Moving Average - Frasers L&I Tr AUD (BWQU.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -53,12 +51,10 @@ data.addColumn('number', 'MA100-1STD');
 data.addColumn('number', 'MA100');
 data.addColumn('number', 'MA100+1STD');
 data.addColumn('number', 'MA100+2STD');
-data.addRows([[new Date(2019, 6, 18),1.28,1.2773,1.282,1.2867,1.2914,1.2961],
-[new Date(2019, 6, 16),1.29,1.29,1.29,1.29,1.29,1.29],
-[new Date(2019, 6, 12),1.29,1.29,1.29,1.29,1.29,1.29],
+data.addRows([[new Date(2019, 6, 29),1.29,1.29,1.29,1.29,1.29,1.29],
 ]);
 var options = {
-    title: 'Bollinger Band 100 - Reit_Industrial (BWQU.SI)',
+    title: 'Bollinger Band 100 - Frasers L&I Tr AUD (BWQU.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -87,12 +83,10 @@ data.addColumn('number', 'MA150-1STD');
 data.addColumn('number', 'MA150');
 data.addColumn('number', 'MA150+1STD');
 data.addColumn('number', 'MA150+2STD');
-data.addRows([[new Date(2019, 6, 18),1.28,1.2773,1.282,1.2867,1.2914,1.2961],
-[new Date(2019, 6, 16),1.29,1.29,1.29,1.29,1.29,1.29],
-[new Date(2019, 6, 12),1.29,1.29,1.29,1.29,1.29,1.29],
+data.addRows([[new Date(2019, 6, 29),1.29,1.29,1.29,1.29,1.29,1.29],
 ]);
 var options = {
-    title: 'Bollinger Band 150 - Reit_Industrial (BWQU.SI)',
+    title: 'Bollinger Band 150 - Frasers L&I Tr AUD (BWQU.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -121,12 +115,10 @@ data.addColumn('number', 'MA200-1STD');
 data.addColumn('number', 'MA200');
 data.addColumn('number', 'MA200+1STD');
 data.addColumn('number', 'MA200+2STD');
-data.addRows([[new Date(2019, 6, 18),1.28,1.2773,1.282,1.2867,1.2914,1.2961],
-[new Date(2019, 6, 16),1.29,1.29,1.29,1.29,1.29,1.29],
-[new Date(2019, 6, 12),1.29,1.29,1.29,1.29,1.29,1.29],
+data.addRows([[new Date(2019, 6, 29),1.29,1.29,1.29,1.29,1.29,1.29],
 ]);
 var options = {
-    title: 'Bollinger Band 200 - Reit_Industrial (BWQU.SI)',
+    title: 'Bollinger Band 200 - Frasers L&I Tr AUD (BWQU.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -146,21 +138,19 @@ var chart = new google.visualization.LineChart(document.getElementById('STD200')
 chart.draw(data, options);
 }
 
-function STD10 () {
+function STD30 () {
 var data = new google.visualization.DataTable();
 data.addColumn('date', 'Date');
 data.addColumn('number', 'Actual');
-data.addColumn('number', 'MA10-2STD');
-data.addColumn('number', 'MA10-1STD');
-data.addColumn('number', 'MA10');
-data.addColumn('number', 'MA10+1STD');
-data.addColumn('number', 'MA10+2STD');
-data.addRows([[new Date(2019, 6, 18),1.28,1.2773,1.282,1.2867,1.2914,1.2961],
-[new Date(2019, 6, 16),1.29,1.29,1.29,1.29,1.29,1.29],
-[new Date(2019, 6, 12),1.29,1.29,1.29,1.29,1.29,1.29],
+data.addColumn('number', 'MA30-2STD');
+data.addColumn('number', 'MA30-1STD');
+data.addColumn('number', 'MA30');
+data.addColumn('number', 'MA30+1STD');
+data.addColumn('number', 'MA30+2STD');
+data.addRows([[new Date(2019, 6, 29),1.29,1.29,1.29,1.29,1.29,1.29],
 ]);
 var options = {
-    title: 'Bollinger Band 10 - Reit_Industrial (BWQU.SI)',
+    title: 'Bollinger Band 30 - Frasers L&I Tr AUD (BWQU.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -176,24 +166,24 @@ var options = {
         stroke: '#666'
     }
 };
-var chart = new google.visualization.LineChart(document.getElementById('STD10'));
+var chart = new google.visualization.LineChart(document.getElementById('STD30'));
 chart.draw(data, options);
 }
 </script>
 <head>
-<title>Reit_Industrial (BWQU.SI)</title>
+<title>Frasers L&I Tr AUD (BWQU.SI)</title>
 </head>
 <body>
 <a href='#MA'>MA</a>
 <a href='#STD100'>STD100</a>
 <a href='#STD150'>STD150</a>
 <a href='#STD200'>STD200</a>
-<a href='#STD10'>STD10</a>
+<a href='#STD30'>STD30</a>
 <br/>
 <a name='MA'></a><br/><div id='MA'></div><br/>
 <a name='STD100'></a><br/><div id='STD100'></div><br/>
 <a name='STD150'></a><br/><div id='STD150'></div><br/>
 <a name='STD200'></a><br/><div id='STD200'></div><br/>
-<a name='STD10'></a><br/><div id='STD10'></div><br/>
+<a name='STD30'></a><br/><div id='STD30'></div><br/>
 </body>
 </html>

@@ -8,7 +8,7 @@ MA();
 STD100();
 STD150();
 STD200();
-STD170();
+STD270();
 }
 
 function MA () {
@@ -18,13 +18,25 @@ data.addColumn('number', 'Actual');
 data.addColumn('number', 'MA100');
 data.addColumn('number', 'MA150');
 data.addColumn('number', 'MA200');
-data.addColumn('number', 'MA170');
-data.addRows([[new Date(2019, 6, 18),0.77,0.755,0.755,0.755,0.755],
-[new Date(2019, 6, 16),0.76,0.748,0.748,0.748,0.748],
-[new Date(2019, 6, 15),0.74,0.740,0.740,0.740,0.740],
+data.addColumn('number', 'MA270');
+data.addRows([[new Date(2019, 8, 3),0.76,0.748,0.748,0.748,0.748],
+[new Date(2019, 8, 2),0.76,0.747,0.747,0.747,0.747],
+[new Date(2019, 7, 30),0.76,0.746,0.746,0.746,0.746],
+[new Date(2019, 7, 29),0.76,0.745,0.745,0.745,0.745],
+[new Date(2019, 7, 28),0.76,0.744,0.744,0.744,0.744],
+[new Date(2019, 7, 27),0.76,0.743,0.743,0.743,0.743],
+[new Date(2019, 7, 26),0.76,0.741,0.741,0.741,0.741],
+[new Date(2019, 7, 23),0.76,0.739,0.739,0.739,0.739],
+[new Date(2019, 7, 22),0.76,0.737,0.737,0.737,0.737],
+[new Date(2019, 7, 21),0.75,0.734,0.734,0.734,0.734],
+[new Date(2019, 7, 20),0.73,0.731,0.731,0.731,0.731],
+[new Date(2019, 7, 19),0.73,0.731,0.731,0.731,0.731],
+[new Date(2019, 7, 16),0.73,0.732,0.732,0.732,0.732],
+[new Date(2019, 7, 15),0.73,0.733,0.733,0.733,0.733],
+[new Date(2019, 7, 14),0.74,0.735,0.735,0.735,0.735],
 ]);
 var options = {
-    title: 'Moving Average - Reit_Industrial (CSFU.SI)',
+    title: 'Moving Average - CromwellReit SGD (CSFU.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -53,12 +65,24 @@ data.addColumn('number', 'MA100-1STD');
 data.addColumn('number', 'MA100');
 data.addColumn('number', 'MA100+1STD');
 data.addColumn('number', 'MA100+2STD');
-data.addRows([[new Date(2019, 6, 18),0.77,0.7306,0.7428,0.755,0.7672,0.7794],
-[new Date(2019, 6, 16),0.76,0.7325,0.74,0.7475,0.755,0.7625],
-[new Date(2019, 6, 15),0.74,0.74,0.74,0.74,0.74,0.74],
+data.addRows([[new Date(2019, 8, 3),0.76,0.7232,0.7356001,0.748,0.7604,0.7728],
+[new Date(2019, 8, 2),0.76,0.7223,0.7347,0.7471,0.7595,0.7719],
+[new Date(2019, 7, 30),0.76,0.7216001,0.7339,0.7462,0.7585,0.7708],
+[new Date(2019, 7, 29),0.76,0.7208,0.7329,0.745,0.7571,0.7692],
+[new Date(2019, 7, 28),0.76,0.7197,0.7319,0.7441,0.7563,0.7685],
+[new Date(2019, 7, 27),0.76,0.7184,0.7307,0.743,0.7553,0.7675999],
+[new Date(2019, 7, 26),0.76,0.7181,0.7296,0.7411,0.7526,0.7641],
+[new Date(2019, 7, 23),0.76,0.7174,0.7284001,0.7394,0.7504,0.7614],
+[new Date(2019, 7, 22),0.76,0.7173,0.7272,0.7371,0.747,0.7569],
+[new Date(2019, 7, 21),0.75,0.7196,0.7269,0.7342,0.7415,0.7488],
+[new Date(2019, 7, 20),0.73,0.727,0.729,0.731,0.733,0.735],
+[new Date(2019, 7, 19),0.73,0.7269,0.7291,0.7313,0.7335,0.7357],
+[new Date(2019, 7, 16),0.73,0.7269,0.7293,0.7317,0.7341,0.7365],
+[new Date(2019, 7, 15),0.73,0.7275,0.73,0.7325,0.735,0.7375],
+[new Date(2019, 7, 14),0.74,0.735,0.735,0.735,0.735,0.735],
 ]);
 var options = {
-    title: 'Bollinger Band 100 - Reit_Industrial (CSFU.SI)',
+    title: 'Bollinger Band 100 - CromwellReit SGD (CSFU.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -87,12 +111,24 @@ data.addColumn('number', 'MA150-1STD');
 data.addColumn('number', 'MA150');
 data.addColumn('number', 'MA150+1STD');
 data.addColumn('number', 'MA150+2STD');
-data.addRows([[new Date(2019, 6, 18),0.77,0.7306,0.7428,0.755,0.7672,0.7794],
-[new Date(2019, 6, 16),0.76,0.7325,0.74,0.7475,0.755,0.7625],
-[new Date(2019, 6, 15),0.74,0.74,0.74,0.74,0.74,0.74],
+data.addRows([[new Date(2019, 8, 3),0.76,0.7232,0.7356001,0.748,0.7604,0.7728],
+[new Date(2019, 8, 2),0.76,0.7223,0.7347,0.7471,0.7595,0.7719],
+[new Date(2019, 7, 30),0.76,0.7216001,0.7339,0.7462,0.7585,0.7708],
+[new Date(2019, 7, 29),0.76,0.7208,0.7329,0.745,0.7571,0.7692],
+[new Date(2019, 7, 28),0.76,0.7197,0.7319,0.7441,0.7563,0.7685],
+[new Date(2019, 7, 27),0.76,0.7184,0.7307,0.743,0.7553,0.7675999],
+[new Date(2019, 7, 26),0.76,0.7181,0.7296,0.7411,0.7526,0.7641],
+[new Date(2019, 7, 23),0.76,0.7174,0.7284001,0.7394,0.7504,0.7614],
+[new Date(2019, 7, 22),0.76,0.7173,0.7272,0.7371,0.747,0.7569],
+[new Date(2019, 7, 21),0.75,0.7196,0.7269,0.7342,0.7415,0.7488],
+[new Date(2019, 7, 20),0.73,0.727,0.729,0.731,0.733,0.735],
+[new Date(2019, 7, 19),0.73,0.7269,0.7291,0.7313,0.7335,0.7357],
+[new Date(2019, 7, 16),0.73,0.7269,0.7293,0.7317,0.7341,0.7365],
+[new Date(2019, 7, 15),0.73,0.7275,0.73,0.7325,0.735,0.7375],
+[new Date(2019, 7, 14),0.74,0.735,0.735,0.735,0.735,0.735],
 ]);
 var options = {
-    title: 'Bollinger Band 150 - Reit_Industrial (CSFU.SI)',
+    title: 'Bollinger Band 150 - CromwellReit SGD (CSFU.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -121,12 +157,24 @@ data.addColumn('number', 'MA200-1STD');
 data.addColumn('number', 'MA200');
 data.addColumn('number', 'MA200+1STD');
 data.addColumn('number', 'MA200+2STD');
-data.addRows([[new Date(2019, 6, 18),0.77,0.7306,0.7428,0.755,0.7672,0.7794],
-[new Date(2019, 6, 16),0.76,0.7325,0.74,0.7475,0.755,0.7625],
-[new Date(2019, 6, 15),0.74,0.74,0.74,0.74,0.74,0.74],
+data.addRows([[new Date(2019, 8, 3),0.76,0.7232,0.7356001,0.748,0.7604,0.7728],
+[new Date(2019, 8, 2),0.76,0.7223,0.7347,0.7471,0.7595,0.7719],
+[new Date(2019, 7, 30),0.76,0.7216001,0.7339,0.7462,0.7585,0.7708],
+[new Date(2019, 7, 29),0.76,0.7208,0.7329,0.745,0.7571,0.7692],
+[new Date(2019, 7, 28),0.76,0.7197,0.7319,0.7441,0.7563,0.7685],
+[new Date(2019, 7, 27),0.76,0.7184,0.7307,0.743,0.7553,0.7675999],
+[new Date(2019, 7, 26),0.76,0.7181,0.7296,0.7411,0.7526,0.7641],
+[new Date(2019, 7, 23),0.76,0.7174,0.7284001,0.7394,0.7504,0.7614],
+[new Date(2019, 7, 22),0.76,0.7173,0.7272,0.7371,0.747,0.7569],
+[new Date(2019, 7, 21),0.75,0.7196,0.7269,0.7342,0.7415,0.7488],
+[new Date(2019, 7, 20),0.73,0.727,0.729,0.731,0.733,0.735],
+[new Date(2019, 7, 19),0.73,0.7269,0.7291,0.7313,0.7335,0.7357],
+[new Date(2019, 7, 16),0.73,0.7269,0.7293,0.7317,0.7341,0.7365],
+[new Date(2019, 7, 15),0.73,0.7275,0.73,0.7325,0.735,0.7375],
+[new Date(2019, 7, 14),0.74,0.735,0.735,0.735,0.735,0.735],
 ]);
 var options = {
-    title: 'Bollinger Band 200 - Reit_Industrial (CSFU.SI)',
+    title: 'Bollinger Band 200 - CromwellReit SGD (CSFU.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -146,21 +194,33 @@ var chart = new google.visualization.LineChart(document.getElementById('STD200')
 chart.draw(data, options);
 }
 
-function STD170 () {
+function STD270 () {
 var data = new google.visualization.DataTable();
 data.addColumn('date', 'Date');
 data.addColumn('number', 'Actual');
-data.addColumn('number', 'MA170-2STD');
-data.addColumn('number', 'MA170-1STD');
-data.addColumn('number', 'MA170');
-data.addColumn('number', 'MA170+1STD');
-data.addColumn('number', 'MA170+2STD');
-data.addRows([[new Date(2019, 6, 18),0.77,0.7306,0.7428,0.755,0.7672,0.7794],
-[new Date(2019, 6, 16),0.76,0.7325,0.74,0.7475,0.755,0.7625],
-[new Date(2019, 6, 15),0.74,0.74,0.74,0.74,0.74,0.74],
+data.addColumn('number', 'MA270-2STD');
+data.addColumn('number', 'MA270-1STD');
+data.addColumn('number', 'MA270');
+data.addColumn('number', 'MA270+1STD');
+data.addColumn('number', 'MA270+2STD');
+data.addRows([[new Date(2019, 8, 3),0.76,0.7232,0.7356001,0.748,0.7604,0.7728],
+[new Date(2019, 8, 2),0.76,0.7223,0.7347,0.7471,0.7595,0.7719],
+[new Date(2019, 7, 30),0.76,0.7216001,0.7339,0.7462,0.7585,0.7708],
+[new Date(2019, 7, 29),0.76,0.7208,0.7329,0.745,0.7571,0.7692],
+[new Date(2019, 7, 28),0.76,0.7197,0.7319,0.7441,0.7563,0.7685],
+[new Date(2019, 7, 27),0.76,0.7184,0.7307,0.743,0.7553,0.7675999],
+[new Date(2019, 7, 26),0.76,0.7181,0.7296,0.7411,0.7526,0.7641],
+[new Date(2019, 7, 23),0.76,0.7174,0.7284001,0.7394,0.7504,0.7614],
+[new Date(2019, 7, 22),0.76,0.7173,0.7272,0.7371,0.747,0.7569],
+[new Date(2019, 7, 21),0.75,0.7196,0.7269,0.7342,0.7415,0.7488],
+[new Date(2019, 7, 20),0.73,0.727,0.729,0.731,0.733,0.735],
+[new Date(2019, 7, 19),0.73,0.7269,0.7291,0.7313,0.7335,0.7357],
+[new Date(2019, 7, 16),0.73,0.7269,0.7293,0.7317,0.7341,0.7365],
+[new Date(2019, 7, 15),0.73,0.7275,0.73,0.7325,0.735,0.7375],
+[new Date(2019, 7, 14),0.74,0.735,0.735,0.735,0.735,0.735],
 ]);
 var options = {
-    title: 'Bollinger Band 170 - Reit_Industrial (CSFU.SI)',
+    title: 'Bollinger Band 270 - CromwellReit SGD (CSFU.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -176,24 +236,24 @@ var options = {
         stroke: '#666'
     }
 };
-var chart = new google.visualization.LineChart(document.getElementById('STD170'));
+var chart = new google.visualization.LineChart(document.getElementById('STD270'));
 chart.draw(data, options);
 }
 </script>
 <head>
-<title>Reit_Industrial (CSFU.SI)</title>
+<title>CromwellReit SGD (CSFU.SI)</title>
 </head>
 <body>
 <a href='#MA'>MA</a>
 <a href='#STD100'>STD100</a>
 <a href='#STD150'>STD150</a>
 <a href='#STD200'>STD200</a>
-<a href='#STD170'>STD170</a>
+<a href='#STD270'>STD270</a>
 <br/>
 <a name='MA'></a><br/><div id='MA'></div><br/>
 <a name='STD100'></a><br/><div id='STD100'></div><br/>
 <a name='STD150'></a><br/><div id='STD150'></div><br/>
 <a name='STD200'></a><br/><div id='STD200'></div><br/>
-<a name='STD170'></a><br/><div id='STD170'></div><br/>
+<a name='STD270'></a><br/><div id='STD270'></div><br/>
 </body>
 </html>
