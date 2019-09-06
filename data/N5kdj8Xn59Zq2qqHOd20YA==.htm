@@ -8,7 +8,7 @@ MA();
 STD100();
 STD150();
 STD200();
-STD160();
+STD260();
 PE();
 PB();
 NaAndDebt();
@@ -25,8 +25,10 @@ data.addColumn('number', 'Actual');
 data.addColumn('number', 'MA100');
 data.addColumn('number', 'MA150');
 data.addColumn('number', 'MA200');
-data.addColumn('number', 'MA160');
-data.addRows([[new Date(2019, 8, 3),3.99,4.149,4.149,4.149,4.149],
+data.addColumn('number', 'MA260');
+data.addRows([[new Date(2019, 8, 5),3.96,4.143,4.143,4.143,4.143],
+[new Date(2019, 8, 4),3.96,4.146,4.146,4.146,4.146],
+[new Date(2019, 8, 3),3.99,4.149,4.149,4.149,4.149],
 [new Date(2019, 8, 2),3.93,4.152,4.152,4.152,4.152],
 [new Date(2019, 7, 30),3.94,4.155,4.155,4.155,4.155],
 [new Date(2019, 7, 29),3.96,4.159,4.159,4.159,4.159],
@@ -120,7 +122,9 @@ data.addColumn('number', 'MA100-1STD');
 data.addColumn('number', 'MA100');
 data.addColumn('number', 'MA100+1STD');
 data.addColumn('number', 'MA100+2STD');
-data.addRows([[new Date(2019, 8, 3),3.99,3.9208,4.0349,4.149,4.2631,4.3772],
+data.addRows([[new Date(2019, 8, 5),3.96,3.9092,4.0262,4.1432,4.2602,4.3772],
+[new Date(2019, 8, 4),3.96,3.9149,4.0305,4.1461,4.2617,4.3773],
+[new Date(2019, 8, 3),3.99,3.9208,4.0349,4.149,4.2631,4.3772],
 [new Date(2019, 8, 2),3.93,3.9252,4.0384,4.1516,4.2648,4.378],
 [new Date(2019, 7, 30),3.94,3.9342,4.0447,4.1552,4.2657,4.3762],
 [new Date(2019, 7, 29),3.96,3.943,4.0509,4.1588,4.2667,4.3746],
@@ -214,7 +218,9 @@ data.addColumn('number', 'MA150-1STD');
 data.addColumn('number', 'MA150');
 data.addColumn('number', 'MA150+1STD');
 data.addColumn('number', 'MA150+2STD');
-data.addRows([[new Date(2019, 8, 3),3.99,3.9208,4.0349,4.149,4.2631,4.3772],
+data.addRows([[new Date(2019, 8, 5),3.96,3.9092,4.0262,4.1432,4.2602,4.3772],
+[new Date(2019, 8, 4),3.96,3.9149,4.0305,4.1461,4.2617,4.3773],
+[new Date(2019, 8, 3),3.99,3.9208,4.0349,4.149,4.2631,4.3772],
 [new Date(2019, 8, 2),3.93,3.9252,4.0384,4.1516,4.2648,4.378],
 [new Date(2019, 7, 30),3.94,3.9342,4.0447,4.1552,4.2657,4.3762],
 [new Date(2019, 7, 29),3.96,3.943,4.0509,4.1588,4.2667,4.3746],
@@ -308,7 +314,9 @@ data.addColumn('number', 'MA200-1STD');
 data.addColumn('number', 'MA200');
 data.addColumn('number', 'MA200+1STD');
 data.addColumn('number', 'MA200+2STD');
-data.addRows([[new Date(2019, 8, 3),3.99,3.9208,4.0349,4.149,4.2631,4.3772],
+data.addRows([[new Date(2019, 8, 5),3.96,3.9092,4.0262,4.1432,4.2602,4.3772],
+[new Date(2019, 8, 4),3.96,3.9149,4.0305,4.1461,4.2617,4.3773],
+[new Date(2019, 8, 3),3.99,3.9208,4.0349,4.149,4.2631,4.3772],
 [new Date(2019, 8, 2),3.93,3.9252,4.0384,4.1516,4.2648,4.378],
 [new Date(2019, 7, 30),3.94,3.9342,4.0447,4.1552,4.2657,4.3762],
 [new Date(2019, 7, 29),3.96,3.943,4.0509,4.1588,4.2667,4.3746],
@@ -393,16 +401,18 @@ var chart = new google.visualization.LineChart(document.getElementById('STD200')
 chart.draw(data, options);
 }
 
-function STD160 () {
+function STD260 () {
 var data = new google.visualization.DataTable();
 data.addColumn('date', 'Date');
 data.addColumn('number', 'Actual');
-data.addColumn('number', 'MA160-2STD');
-data.addColumn('number', 'MA160-1STD');
-data.addColumn('number', 'MA160');
-data.addColumn('number', 'MA160+1STD');
-data.addColumn('number', 'MA160+2STD');
-data.addRows([[new Date(2019, 8, 3),3.99,3.9208,4.0349,4.149,4.2631,4.3772],
+data.addColumn('number', 'MA260-2STD');
+data.addColumn('number', 'MA260-1STD');
+data.addColumn('number', 'MA260');
+data.addColumn('number', 'MA260+1STD');
+data.addColumn('number', 'MA260+2STD');
+data.addRows([[new Date(2019, 8, 5),3.96,3.9092,4.0262,4.1432,4.2602,4.3772],
+[new Date(2019, 8, 4),3.96,3.9149,4.0305,4.1461,4.2617,4.3773],
+[new Date(2019, 8, 3),3.99,3.9208,4.0349,4.149,4.2631,4.3772],
 [new Date(2019, 8, 2),3.93,3.9252,4.0384,4.1516,4.2648,4.378],
 [new Date(2019, 7, 30),3.94,3.9342,4.0447,4.1552,4.2657,4.3762],
 [new Date(2019, 7, 29),3.96,3.943,4.0509,4.1588,4.2667,4.3746],
@@ -467,7 +477,7 @@ data.addRows([[new Date(2019, 8, 3),3.99,3.9208,4.0349,4.149,4.2631,4.3772],
 [new Date(2019, 5, 4),4.00,4,4,4,4,4],
 ]);
 var options = {
-    title: 'Bollinger Band 160 - ST Engineering (S63.SI)',
+    title: 'Bollinger Band 260 - ST Engineering (S63.SI)',
     width: 900,
     height: 500,
     legend: { position: 'bottom' },
@@ -483,7 +493,7 @@ var options = {
         stroke: '#666'
     }
 };
-var chart = new google.visualization.LineChart(document.getElementById('STD160'));
+var chart = new google.visualization.LineChart(document.getElementById('STD260'));
 chart.draw(data, options);
 }
 
@@ -492,7 +502,9 @@ var data = new google.visualization.DataTable();
 data.addColumn('date', 'Date');
 data.addColumn('number', 'Price');
 data.addColumn('number', 'PE');
-data.addRows([[new Date(2019, 8, 3),3.99,23.6],
+data.addRows([[new Date(2019, 8, 5),3.96,23.4],
+[new Date(2019, 8, 4),3.96,23.4],
+[new Date(2019, 8, 3),3.99,23.6],
 [new Date(2019, 8, 2),3.93,23.2],
 [new Date(2019, 7, 30),3.94,23.3],
 [new Date(2019, 7, 29),3.96,23.4],
@@ -590,7 +602,9 @@ var data = new google.visualization.DataTable();
 data.addColumn('date', 'Date');
 data.addColumn('number', 'Price');
 data.addColumn('number', 'PB');
-data.addRows([[new Date(2019, 8, 3),3.99,5.80],
+data.addRows([[new Date(2019, 8, 5),3.96,5.76],
+[new Date(2019, 8, 4),3.96,5.76],
+[new Date(2019, 8, 3),3.99,5.80],
 [new Date(2019, 8, 2),3.93,5.71],
 [new Date(2019, 7, 30),3.94,5.73],
 [new Date(2019, 7, 29),3.96,5.76],
@@ -753,7 +767,9 @@ var data = new google.visualization.DataTable();
 data.addColumn('date', 'Date');
 data.addColumn('number', 'Price');
 data.addColumn('number', 'DivYield');
-data.addRows([[new Date(2019, 8, 3),3.99,3.8],
+data.addRows([[new Date(2019, 8, 5),3.96,3.8],
+[new Date(2019, 8, 4),3.96,3.8],
+[new Date(2019, 8, 3),3.99,3.8],
 [new Date(2019, 8, 2),3.93,3.8],
 [new Date(2019, 7, 30),3.94,3.8],
 [new Date(2019, 7, 29),3.96,3.8],
@@ -918,7 +934,7 @@ chart.draw(data, options);
 <a href='#STD100'>STD100</a>
 <a href='#STD150'>STD150</a>
 <a href='#STD200'>STD200</a>
-<a href='#STD160'>STD160</a>
+<a href='#STD260'>STD260</a>
 <a href='#PE'>PE</a>
 <a href='#PB'>PB</a>
 <a href='#NaAndDebt'>NaAndDebt</a>
@@ -931,7 +947,7 @@ chart.draw(data, options);
 <a name='STD100'></a><br/><div id='STD100'></div><br/>
 <a name='STD150'></a><br/><div id='STD150'></div><br/>
 <a name='STD200'></a><br/><div id='STD200'></div><br/>
-<a name='STD160'></a><br/><div id='STD160'></div><br/>
+<a name='STD260'></a><br/><div id='STD260'></div><br/>
 <a name='PE'></a><br/>PE: Max[25.5(2019-07-30)] vs Min[23.2(2019-08-26)]<br/><div id='PE'></div><br/>
 <a name='PB'></a><br/>PB: Max[6.3(2019-07-30)] vs Min[5.7(2019-08-26)]<br/><div id='PB'></div><br/>
 <a name='NaAndDebt'></a><br/><div id='NaAndDebt'></div><br/>
